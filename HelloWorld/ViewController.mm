@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  ViewController.mm
 //  HelloWorld
 //
 //  Created by Zhang Yungui on 14-4-28.
@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GiViewHelper.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
+    [helper createGraphView:self.view.bounds :self.view];
+    helper.command = @"splines";
 }
 
 - (void)didReceiveMemoryWarning
