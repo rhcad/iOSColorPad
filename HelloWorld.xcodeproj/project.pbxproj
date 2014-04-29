@@ -47,6 +47,7 @@
 		024C5D40190EC3EF005974B9 /* Setting-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 024C5D26190EC3EF005974B9 /* Setting-2@2x.png */; };
 		024C5D41190EC3EF005974B9 /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 024C5D27190EC3EF005974B9 /* Yellow.png */; };
 		024C5D42190EC3EF005974B9 /* Yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 024C5D28190EC3EF005974B9 /* Yellow@2x.png */; };
+		BFDEFBA8190FB2E600EFC891 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDEFBA7190FB2E600EFC891 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +155,8 @@
 		024C5D26190EC3EF005974B9 /* Setting-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-2@2x.png"; sourceTree = "<group>"; };
 		024C5D27190EC3EF005974B9 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
 		024C5D28190EC3EF005974B9 /* Yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yellow@2x.png"; sourceTree = "<group>"; };
+		BFDEFBA6190FB2E600EFC891 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		BFDEFBA7190FB2E600EFC891 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +213,8 @@
 				024C5C9B190EA6D8005974B9 /* AppDelegate.m */,
 				024C5C9D190EA6D8005974B9 /* Main_iPhone.storyboard */,
 				024C5CA0190EA6D8005974B9 /* Main_iPad.storyboard */,
+				BFDEFBA6190FB2E600EFC891 /* SettingViewController.h */,
+				BFDEFBA7190FB2E600EFC891 /* SettingViewController.m */,
 				024C5CA3190EA6D8005974B9 /* ViewController.h */,
 				024C5CA4190EA6D8005974B9 /* ViewController.mm */,
 				024C5CA6190EA6D8005974B9 /* Images.xcassets */,
@@ -444,6 +449,7 @@
 				024C5CA5190EA6D8005974B9 /* ViewController.mm in Sources */,
 				024C5C9C190EA6D8005974B9 /* AppDelegate.m in Sources */,
 				024C5C98190EA6D8005974B9 /* main.m in Sources */,
+				BFDEFBA8190FB2E600EFC891 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
