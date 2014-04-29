@@ -1,24 +1,24 @@
 # iOSHelloWorld
 
-In this tutorial, you will create a vector drawing app based on TouchVG.
+In this tutorial, you will create a vector drawing app based on TouchVG. See [touchvg/Readme.txt](touchvg/Readme.txt) to copy files required to compile.
 
-1. Create a project with the `Single View Application` wizard.
+- Create a project with the `Single View Application` wizard.
 
-2. Add the libraries and header files of TouchVG to this project.
+- Add the libraries and header files of TouchVG to this project.
 
    - `cd' to the 'ios' directory of the TouchVG project.
    - Type `./build.sh` to compile libraries outputed to the 'ios/output' directory.
    - Add `TouchVG`, `TouchVGCore`, `libTouchVG.a` and `libTouchVGCore.a` to this project.
    - Change 'Library Search Paths' of the HelloWorld target from '.../iOSHelloWorld/touchvg' to the relative path 'touchvg'.
 
-3. Add `QuartzCore.framework` and `libc++.dylib` in 'Link Binary With Libraries' of the target.
+- Add `QuartzCore.framework` and `libc++.dylib` in 'Link Binary With Libraries' of the target.
 
    - Add libc++.dylib for ViewController.m or change ViewController.m to ViewController.mm to use Obj-C++ classes of TouchVG.
 
-4. Add a vector drawing view in ViewController.mm/.m:
+- Add a vector drawing view in ViewController.mm/.m:
 
    - Add `#import "GiViewHelper.h"` to use `helper = [GiViewHelper sharedInstance]`.
    - Add a drawing view in self.view via `[helper createGraphView:self.view.bounds :self.view];`.
-   - Start the free-hand splines command via `helper.command = @"splines";`.
+   - Start the free-hand splines command via `helper.command = @"splines";`. The names of all commands will be printed in logging after the app runs.
 
-5. Enjoy the simple drawing app now!
+- Enjoy the simple drawing app now! You can fork this project and add drawing UI  reference to [ColorPad wizard](http://www.raywenderlich.com/18840/how-to-make-a-simple-drawing-app-with-uikit).
