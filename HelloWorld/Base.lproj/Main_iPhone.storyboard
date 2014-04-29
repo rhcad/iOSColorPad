@@ -129,7 +129,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="eFn-Pq-Udf" userLabel="BrushSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="eFn-Pq-Udf" userLabel="BrushSlider">
                                 <rect key="frame" x="86" y="91" width="216" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>

@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UIView *tempDraw;
 @property (weak, nonatomic) GiPaintView* mPaintView;
 @property (strong, nonatomic) NSArray* colors;
+@property (strong, nonatomic) GiViewHelper *helper;
+
 @end
 
 @implementation ViewController
@@ -23,9 +25,9 @@
 {
     [super viewDidLoad];
     
-    GiViewHelper *helper = [GiViewHelper sharedInstance];
-    self.mPaintView = [helper createGraphView:self.mainMage.bounds :self.view];
-    helper.command = @"splines";
+   // GiViewHelper *helper = [GiViewHelper sharedInstance];
+    self.mPaintView = [self.helper createGraphView:self.mainMage.bounds :self.view];
+    self.helper.command = @"splines";
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,13 +39,13 @@
 {
     NSLog(@"pencilPressed ar %d",sender.tag);
     
-    GiViewHelper *helper = [GiViewHelper sharedInstance:self.mPaintView];
-    helper.lineColor = self.colors[sender.tag];
+    self.helper.lineColor = self.colors[sender.tag];
     
 }
 - (IBAction)eraserPressed:(id)sender
 {
     NSLog(@"eraserPressed");
+    self.helper.lineColor = [UIColor whiteColor];
 }
 
 - (NSArray*)colors
@@ -59,5 +61,13 @@
     if ([segue.identifier isEqual:@"segueForSetting"]){
         ((SettingViewController*)segue.destinationViewController).helper = [GiViewHelper sharedInstance:self.mPaintView];
     }
+}
+
+- (GiViewHelper*)helper
+{
+    if (!_helper){
+        _helper = [GiViewHelper sharedInstance];
+    }
+    return _helper;
 }
 @end

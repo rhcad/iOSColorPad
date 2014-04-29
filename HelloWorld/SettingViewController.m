@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.brushSlider.value = self.helper.lineWidth;
+    self.brushSlider.value = self.helper.strokeWidth;
     self.opacitySlider.value = self.helper.lineAlpha;
     //self.helper.lineColor = [UIColor blueColor];
 }
@@ -45,7 +45,9 @@
 
     switch (sender.tag) {
         case 0:{
-            self.helper.lineWidth = sender.value;
+            //self.helper.lineWidth = sender.value;
+            self.helper.strokeWidth = sender.value;
+            NSLog(@"self.helper.strokeWidth = %g   sender.value = %g",sender.value);
             break;
         }
         case 1:{
