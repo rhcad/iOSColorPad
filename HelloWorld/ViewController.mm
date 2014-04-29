@@ -10,16 +10,18 @@
 #import "GiViewHelper.h"
 #import "SettingViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIView *mainMage;
 @property (weak, nonatomic) IBOutlet UIView *tempDraw;
 @property (weak, nonatomic) GiPaintView* mPaintView;
 @property (strong, nonatomic) NSArray* colors;
 @property (strong, nonatomic) GiViewHelper *helper;
-
+@property (strong, nonatomic) UIActionSheet *shapeSheet;
 @end
 
 @implementation ViewController
+
+#pragma mark Initialization
 
 - (void)viewDidLoad
 {
@@ -35,6 +37,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (GiViewHelper*)helper
+{
+    if (!_helper){
+        _helper = [GiViewHelper sharedInstance];
+    }
+    return _helper;
+}
+
+- (NSArray*)colors
+{
+    if(!_colors){
+        _colors = [[NSArray alloc] initWithObjects:[UIColor blackColor],[UIColor blueColor],[UIColor redColor],nil];
+    }
+    return _colors;
+}
+
+
+#pragma mark IBActions
+
 - (IBAction)pencilPressed:(UIButton*)sender
 {
     NSLog(@"pencilPressed ar %d",sender.tag);
@@ -46,15 +68,9 @@
 {
     NSLog(@"eraserPressed");
     self.helper.lineColor = [UIColor whiteColor];
+    self.helper.lineAlpha = 1;
 }
 
-- (NSArray*)colors
-{
-    if(!_colors){
-        _colors = [[NSArray alloc] initWithObjects:[UIColor blackColor],[UIColor grayColor],[UIColor redColor],nil];
-    }
-    return _colors;
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -63,11 +79,47 @@
     }
 }
 
-- (GiViewHelper*)helper
+
+- (IBAction)redo:(id)sender
 {
-    if (!_helper){
-        _helper = [GiViewHelper sharedInstance];
+    if ([self.helper canRedo]) {
+        [self.helper redo];
     }
-    return _helper;
 }
+
+- (IBAction)undo:(id)sender
+{
+    [self.helper undo];
+}
+- (IBAction)testBtn:(id)sender
+{
+    self.helper.command = @"line";
+}
+
+#pragma mark ActionSheet
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(actionSheet == self.shapeSheet && buttonIndex!=actionSheet.cancelButtonIndex){
+        self.helper.command = [self.shapeSheet buttonTitleAtIndex:buttonIndex];
+    }
+}
+
+- (UIActionSheet*)shapeSheet
+{
+    if(!_shapeSheet){
+        _shapeSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                  delegate:self
+                                         cancelButtonTitle:@"Cancle"
+                                    destructiveButtonTitle:nil
+                                         otherButtonTitles:@"line",@"splines", nil];
+    }
+    return _shapeSheet;
+}
+
+- (IBAction)choseShape:(id)sender
+{
+    [self.shapeSheet showInView:self.view];
+}
+
+
 @end
