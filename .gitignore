@@ -1,7 +1,9 @@
 build
 *~
+*.tmp
 *.DS_Store
 xcuserdata
 xcshareddata
 ._*
 *.a
+touchvg/*.h
