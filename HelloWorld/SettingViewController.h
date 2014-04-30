@@ -10,5 +10,4 @@
 #import "GiViewHelper.h"
 
 @interface SettingViewController : UIViewController
-@property (strong, nonatomic)GiViewHelper *helper;
 @end

@@ -12,106 +12,119 @@
 
 @interface ViewController ()<UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIView *mainMage;
-@property (weak, nonatomic) IBOutlet UIView *tempDraw;
-@property (weak, nonatomic) GiPaintView* mPaintView;
-@property (strong, nonatomic) NSArray* colors;
-@property (strong, nonatomic) GiViewHelper *helper;
+@property (weak, nonatomic) GiPaintView *mPaintView;
 @property (strong, nonatomic) UIActionSheet *shapeSheet;
 @end
 
+
+
+
 @implementation ViewController
 
-#pragma mark Initialization
+#pragma mark - Initialization
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
+    self.mPaintView = [helper createGraphView:self.mainMage.bounds :self.view];
+    helper.command = @"splines";
+
     
-   // GiViewHelper *helper = [GiViewHelper sharedInstance];
-    self.mPaintView = [self.helper createGraphView:self.mainMage.bounds :self.view];
-    self.helper.command = @"splines";
+    //undo record
+    
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                          NSUserDomainMask, YES) objectAtIndex:0];
+    [helper startUndoRecord:[path stringByAppendingPathComponent:@"undo"]];
+
+
 }
 
-- (void)didReceiveMemoryWarning
++ (NSArray*)colors
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (GiViewHelper*)helper
-{
-    if (!_helper){
-        _helper = [GiViewHelper sharedInstance];
-    }
-    return _helper;
-}
-
-- (NSArray*)colors
-{
-    if(!_colors){
-        _colors = [[NSArray alloc] initWithObjects:[UIColor blackColor],[UIColor blueColor],[UIColor redColor],nil];
-    }
+    NSArray *_colors = [[NSArray alloc] initWithObjects:[UIColor blackColor],[UIColor blueColor],[UIColor redColor],nil];
     return _colors;
 }
 
++ (NSArray*)commands
+{
+    //NSArray *_commands = [[NSArray alloc] initWithObjects:@"erase",@"ellipse",@"dot",@"splines",@"grid",@"select",@"circle",@"polygon",@"spline_mouse",@"arc3p",@"rect",@"diamond",@"quadrangle",@"triangle",@"arc_cse",@"square",@"line",@"lines",@"parallel",@"arc_tan", nil];
+        NSArray *_commands = [[NSArray alloc] initWithObjects:@"ellipse",@"splines",@"select",@"circle",@"rect",@"quadrangle",@"triangle",@"square",@"line",@"Cancle",nil];
+    return _commands;
+}
 
-#pragma mark IBActions
+#pragma mark - IBActions
 
 - (IBAction)pencilPressed:(UIButton*)sender
 {
-    NSLog(@"pencilPressed ar %d",sender.tag);
+    NSLog(@"pencilPressed ar %ld",(long)sender.tag);
+
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
+    helper.lineColor = [[ViewController colors] objectAtIndex:sender.tag];
     
-    self.helper.lineColor = self.colors[sender.tag];
     
 }
 - (IBAction)eraserPressed:(id)sender
 {
     NSLog(@"eraserPressed");
-    self.helper.lineColor = [UIColor whiteColor];
-    self.helper.lineAlpha = 1;
-}
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqual:@"segueForSetting"]){
-        ((SettingViewController*)segue.destinationViewController).helper = [GiViewHelper sharedInstance:self.mPaintView];
-    }
+    
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
+    helper.command = @"erase";
+    
 }
 
 
 - (IBAction)redo:(id)sender
 {
-    if ([self.helper canRedo]) {
-        [self.helper redo];
-    }
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
+    [helper redo];
 }
 
 - (IBAction)undo:(id)sender
 {
-    [self.helper undo];
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
+    [helper undo];
 }
 - (IBAction)testBtn:(id)sender
 {
-    self.helper.command = @"line";
+
 }
 
-#pragma mark ActionSheet
+#pragma mark - ActionSheet
+
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
     if(actionSheet == self.shapeSheet && buttonIndex!=actionSheet.cancelButtonIndex){
-        self.helper.command = [self.shapeSheet buttonTitleAtIndex:buttonIndex];
+        if ([[self.shapeSheet buttonTitleAtIndex:buttonIndex] isEqual:@"Cancle"]){
+            return;
+        }
+        helper.command = [self.shapeSheet buttonTitleAtIndex:buttonIndex];
+        NSLog(@"press shape sheet at index %d title %@",buttonIndex,[self.shapeSheet buttonTitleAtIndex:buttonIndex]);
     }
 }
 
 - (UIActionSheet*)shapeSheet
 {
     if(!_shapeSheet){
-        _shapeSheet = [[UIActionSheet alloc] initWithTitle:nil
+        /*_shapeSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                   delegate:self
                                          cancelButtonTitle:@"Cancle"
                                     destructiveButtonTitle:nil
-                                         otherButtonTitles:@"line",@"splines", nil];
+                                         otherButtonTitles:@"line",@"lines",@"select",@"splines",@"hittest", nil];
+         */
+        _shapeSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                  delegate:self
+                                         cancelButtonTitle:nil
+                                    destructiveButtonTitle:nil
+                                         otherButtonTitles:nil];
+        int cmdCount = [[ViewController commands] count];
+        for (int i=0; i < cmdCount ; i++) {
+            NSString *cmd = [[ViewController commands] objectAtIndex:i];
+            [_shapeSheet addButtonWithTitle:cmd];
+            NSLog(@"%@",cmd);
+        }
+        NSLog(@"number of buttons = %d  cmdCount = %d ",[_shapeSheet numberOfButtons],cmdCount);
     }
     return _shapeSheet;
 }
@@ -121,5 +134,19 @@
     [self.shapeSheet showInView:self.view];
 }
 
+#pragma mark - operate
+
+- (IBAction)save:(id)sender
+{
+    static int fileCounter = 0;
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
+    [helper saveToFile:[NSString stringWithFormat:@"vgfile%d",fileCounter++ ]];
+}
+
+- (IBAction)reset:(id)sender
+{
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
+    [helper clearShapes];
+}
 
 @end
