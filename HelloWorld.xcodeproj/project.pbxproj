@@ -13,7 +13,6 @@
 		024C5C96190EA6D8005974B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024C5C94190EA6D8005974B9 /* InfoPlist.strings */; };
 		024C5C98190EA6D8005974B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 024C5C97190EA6D8005974B9 /* main.m */; };
 		024C5C9C190EA6D8005974B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 024C5C9B190EA6D8005974B9 /* AppDelegate.m */; };
-		024C5CA2190EA6D8005974B9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024C5CA0190EA6D8005974B9 /* Main_iPad.storyboard */; };
 		024C5CA5190EA6D8005974B9 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 024C5CA4190EA6D8005974B9 /* ViewController.mm */; };
 		024C5CA7190EA6D8005974B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024C5CA6190EA6D8005974B9 /* Images.xcassets */; };
 		024C5D05190EAB3D005974B9 /* libTouchVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 024C5CC5190EAB3D005974B9 /* libTouchVG.a */; };
@@ -46,6 +45,11 @@
 		024C5D40190EC3EF005974B9 /* Setting-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 024C5D26190EC3EF005974B9 /* Setting-2@2x.png */; };
 		024C5D41190EC3EF005974B9 /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 024C5D27190EC3EF005974B9 /* Yellow.png */; };
 		024C5D42190EC3EF005974B9 /* Yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 024C5D28190EC3EF005974B9 /* Yellow@2x.png */; };
+		BF6C2FEA1914A81E00488094 /* undo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6C2FE91914A81E00488094 /* undo.png */; };
+		BF6C2FEC1914A82400488094 /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6C2FEB1914A82400488094 /* redo.png */; };
+		BF6C2FEE1914A8BB00488094 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6C2FED1914A8BB00488094 /* setting.png */; };
+		BF6C2FF01914A99400488094 /* shape.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6C2FEF1914A99400488094 /* shape.png */; };
+		BF944EE51914817500C3EC76 /* colorPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF944EE41914817500C3EC76 /* colorPadView.m */; };
 		BFDEFBA8190FB2E600EFC891 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDEFBA7190FB2E600EFC891 /* SettingViewController.m */; };
 		BFDEFBAE191007C600EFC891 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDEFBAD191007C600EFC891 /* Main_iPhone.storyboard */; };
 /* End PBXBuildFile section */
@@ -61,7 +65,6 @@
 		024C5C99190EA6D8005974B9 /* HelloWorld-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloWorld-Prefix.pch"; sourceTree = "<group>"; };
 		024C5C9A190EA6D8005974B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		024C5C9B190EA6D8005974B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		024C5CA1190EA6D8005974B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		024C5CA3190EA6D8005974B9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		024C5CA4190EA6D8005974B9 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		024C5CA6190EA6D8005974B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -154,6 +157,12 @@
 		024C5D26190EC3EF005974B9 /* Setting-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-2@2x.png"; sourceTree = "<group>"; };
 		024C5D27190EC3EF005974B9 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
 		024C5D28190EC3EF005974B9 /* Yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yellow@2x.png"; sourceTree = "<group>"; };
+		BF6C2FE91914A81E00488094 /* undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = undo.png; sourceTree = "<group>"; };
+		BF6C2FEB1914A82400488094 /* redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redo.png; sourceTree = "<group>"; };
+		BF6C2FED1914A8BB00488094 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		BF6C2FEF1914A99400488094 /* shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape.png; sourceTree = "<group>"; };
+		BF944EE31914817500C3EC76 /* colorPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorPadView.h; sourceTree = "<group>"; };
+		BF944EE41914817500C3EC76 /* colorPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = colorPadView.m; sourceTree = "<group>"; };
 		BFDEFBA6190FB2E600EFC891 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		BFDEFBA7190FB2E600EFC891 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		BFDEFBAD191007C600EFC891 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -213,7 +222,6 @@
 				024C5C9A190EA6D8005974B9 /* AppDelegate.h */,
 				024C5C9B190EA6D8005974B9 /* AppDelegate.m */,
 				BFDEFBAD191007C600EFC891 /* Main_iPhone.storyboard */,
-				024C5CA0190EA6D8005974B9 /* Main_iPad.storyboard */,
 				024C5CA6190EA6D8005974B9 /* Images.xcassets */,
 				024C5C92190EA6D8005974B9 /* Supporting Files */,
 			);
@@ -319,6 +327,10 @@
 		024C5D0E190EC3EE005974B9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BF6C2FEF1914A99400488094 /* shape.png */,
+				BF6C2FED1914A8BB00488094 /* setting.png */,
+				BF6C2FE91914A81E00488094 /* undo.png */,
+				BF6C2FEB1914A82400488094 /* redo.png */,
 				024C5D0F190EC3EE005974B9 /* Black.png */,
 				024C5D10190EC3EE005974B9 /* Black@2x.png */,
 				024C5D11190EC3EE005974B9 /* Blue.png */,
@@ -357,6 +369,8 @@
 				BFDEFBA7190FB2E600EFC891 /* SettingViewController.m */,
 				024C5CA3190EA6D8005974B9 /* ViewController.h */,
 				024C5CA4190EA6D8005974B9 /* ViewController.mm */,
+				BF944EE31914817500C3EC76 /* colorPadView.h */,
+				BF944EE41914817500C3EC76 /* colorPadView.m */,
 			);
 			name = class;
 			sourceTree = "<group>";
@@ -417,14 +431,15 @@
 				024C5D2D190EC3EF005974B9 /* Brown.png in Resources */,
 				024C5D3A190EC3EF005974B9 /* LightGreen@2x.png in Resources */,
 				024C5D42190EC3EF005974B9 /* Yellow@2x.png in Resources */,
-				024C5CA2190EA6D8005974B9 /* Main_iPad.storyboard in Resources */,
 				024C5D3D190EC3EF005974B9 /* Setting-1.png in Resources */,
 				024C5CA7190EA6D8005974B9 /* Images.xcassets in Resources */,
 				024C5D38190EC3EF005974B9 /* LightBlue@2x.png in Resources */,
 				024C5D31190EC3EF005974B9 /* DarkOrange.png in Resources */,
+				BF6C2FEC1914A82400488094 /* redo.png in Resources */,
 				024C5D3E190EC3EF005974B9 /* Setting-1@2x.png in Resources */,
 				024C5D2C190EC3EF005974B9 /* Blue@2x.png in Resources */,
 				024C5D41190EC3EF005974B9 /* Yellow.png in Resources */,
+				BF6C2FF01914A99400488094 /* shape.png in Resources */,
 				024C5D2B190EC3EF005974B9 /* Blue.png in Resources */,
 				024C5D29190EC3EF005974B9 /* Black.png in Resources */,
 				024C5D2F190EC3EF005974B9 /* DarkGreen.png in Resources */,
@@ -432,6 +447,7 @@
 				024C5D07190EAB3D005974B9 /* Readme.txt in Resources */,
 				024C5D39190EC3EF005974B9 /* LightGreen.png in Resources */,
 				024C5D32190EC3EF005974B9 /* DarkOrange@2x.png in Resources */,
+				BF6C2FEE1914A8BB00488094 /* setting.png in Resources */,
 				024C5D37190EC3EF005974B9 /* LightBlue.png in Resources */,
 				024C5C96190EA6D8005974B9 /* InfoPlist.strings in Resources */,
 				024C5D2E190EC3EF005974B9 /* Brown@2x.png in Resources */,
@@ -444,6 +460,7 @@
 				024C5D3C190EC3EF005974B9 /* Red@2x.png in Resources */,
 				024C5D33190EC3EF005974B9 /* Eraser.png in Resources */,
 				BFDEFBAE191007C600EFC891 /* Main_iPhone.storyboard in Resources */,
+				BF6C2FEA1914A81E00488094 /* undo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +473,7 @@
 			files = (
 				024C5CA5190EA6D8005974B9 /* ViewController.mm in Sources */,
 				024C5C9C190EA6D8005974B9 /* AppDelegate.m in Sources */,
+				BF944EE51914817500C3EC76 /* colorPadView.m in Sources */,
 				024C5C98190EA6D8005974B9 /* main.m in Sources */,
 				BFDEFBA8190FB2E600EFC891 /* SettingViewController.m in Sources */,
 			);
@@ -470,14 +488,6 @@
 				024C5C95190EA6D8005974B9 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		024C5CA0190EA6D8005974B9 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				024C5CA1190EA6D8005974B9 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -568,6 +578,7 @@
 					touchvg,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -585,6 +596,7 @@
 					touchvg,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

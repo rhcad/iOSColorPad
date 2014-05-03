@@ -8,11 +8,19 @@
 
 #import "ViewController.h"
 #import "GiViewHelper.h"
+#import "GiPaintView.h"
 #import "SettingViewController.h"
+
+void outputrect(CGRect t)
+{
+    NSLog(@"orgin=(x=%g,y=%g),size=(=%g,height=%g)",t.origin.x,t.origin.y,t.size.width,t.size.height);
+}
+
 
 @interface ViewController ()<UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIView *mainMage;
 @property (weak, nonatomic) GiPaintView *mPaintView;
+@property (weak, nonatomic) IBOutlet UIView *ButtonView;
 @property (strong, nonatomic) UIActionSheet *shapeSheet;
 @end
 
@@ -27,18 +35,24 @@
 {
     [super viewDidLoad];
     GiViewHelper *helper = [GiViewHelper sharedInstance];
-    self.mPaintView = [helper createGraphView:self.mainMage.bounds :self.view];
+    self.mPaintView = [helper createGraphView:self.mainMage.frame :self.view];
     helper.command = @"splines";
+}
 
-    
-    //undo record
-    
+- (void)onFirstRegen:(id)view
+{
+    NSLog(@"- (void)onFirstRegen:(id)view ");
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
                                                           NSUserDomainMask, YES) objectAtIndex:0];
     [helper startUndoRecord:[path stringByAppendingPathComponent:@"undo"]];
-
-
 }
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    self.mPaintView.frame = self.mainMage.frame;
+}
+
 
 + (NSArray*)colors
 {
@@ -57,6 +71,8 @@
 
 - (IBAction)pencilPressed:(UIButton*)sender
 {
+    outputrect(self.mainMage.frame);
+    outputrect(self.ButtonView.frame);
     NSLog(@"pencilPressed ar %ld",(long)sender.tag);
 
     GiViewHelper *helper = [GiViewHelper sharedInstance];
@@ -82,6 +98,7 @@
 
 - (IBAction)undo:(id)sender
 {
+    NSLog(@"undo button pressed");
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     [helper undo];
 }
@@ -100,7 +117,7 @@
             return;
         }
         helper.command = [self.shapeSheet buttonTitleAtIndex:buttonIndex];
-        NSLog(@"press shape sheet at index %d title %@",buttonIndex,[self.shapeSheet buttonTitleAtIndex:buttonIndex]);
+        NSLog(@"press shape sheet at index %ld title %@",(long)buttonIndex,[self.shapeSheet buttonTitleAtIndex:buttonIndex]);
     }
 }
 
@@ -118,13 +135,13 @@
                                          cancelButtonTitle:nil
                                     destructiveButtonTitle:nil
                                          otherButtonTitles:nil];
-        int cmdCount = [[ViewController commands] count];
+        NSUInteger cmdCount = [[ViewController commands] count];
         for (int i=0; i < cmdCount ; i++) {
             NSString *cmd = [[ViewController commands] objectAtIndex:i];
             [_shapeSheet addButtonWithTitle:cmd];
             NSLog(@"%@",cmd);
         }
-        NSLog(@"number of buttons = %d  cmdCount = %d ",[_shapeSheet numberOfButtons],cmdCount);
+        NSLog(@"number of buttons = %ld  cmdCount = %lu ",(long)[_shapeSheet numberOfButtons],(unsigned long)cmdCount);
     }
     return _shapeSheet;
 }

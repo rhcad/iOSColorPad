@@ -67,39 +67,39 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3h-Mu-8GA" userLabel="settings">
-                                        <rect key="frame" x="140" y="42" width="40" height="40"/>
+                                        <rect key="frame" x="82" y="45" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="Setting-2.png">
+                                        <state key="normal" image="setting.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <segue destination="bqT-yO-bur" kind="push" identifier="segueForSetting" id="mo0-9A-ZFV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3k-f1-rAL">
-                                        <rect key="frame" x="20" y="43" width="55" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3k-f1-rAL">
+                                        <rect key="frame" x="6" y="45" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="undo">
+                                        <state key="normal" title="undo" image="undo.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="undo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OPq-C7-oz0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jz9-hn-bO9">
-                                        <rect key="frame" x="20" y="25" width="55" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jz9-hn-bO9">
+                                        <rect key="frame" x="44" y="45" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="redo">
+                                        <state key="normal" title="redo" image="redo.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="redo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Q9M-IE-ZbO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpM-ck-QHY">
-                                        <rect key="frame" x="20" y="5" width="55" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpM-ck-QHY">
+                                        <rect key="frame" x="125" y="47" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="shape">
+                                        <state key="normal" title="shape" image="shape.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -108,7 +108,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhn-OT-Tcv">
-                                        <rect key="frame" x="134" y="11" width="55" height="30"/>
+                                        <rect key="frame" x="66" y="0.0" width="55" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="test">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,7 +118,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.4722869998" green="0.70848527009999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="tfP-34-256" secondAttribute="trailing" constant="66" id="BVs-Lp-bZS"/>
                                     <constraint firstAttribute="trailing" secondItem="BMK-N0-YAD" secondAttribute="trailing" constant="95" id="Vl1-f7-iEf"/>
@@ -152,6 +151,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ButtonView" destination="xcB-Gf-W7A" id="H8j-Oa-7fc"/>
                         <outlet property="mainMage" destination="nIW-vV-4se" id="npv-n1-a4F"/>
                     </connections>
                 </viewController>
@@ -235,7 +235,10 @@
         <image name="Blue.png" width="27" height="166"/>
         <image name="Eraser.png" width="28" height="84"/>
         <image name="Red.png" width="27" height="166"/>
-        <image name="Setting-2.png" width="123" height="127"/>
+        <image name="redo.png" width="128" height="128"/>
+        <image name="setting.png" width="256" height="256"/>
+        <image name="shape.png" width="502" height="502"/>
+        <image name="undo.png" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
