@@ -17,7 +17,7 @@ void outputrect(CGRect t)
 }
 
 
-@interface ViewController ()<UIActionSheetDelegate>
+@interface ViewController ()<UIActionSheetDelegate,GiPaintViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *mainMage;
 @property (weak, nonatomic) GiPaintView *mPaintView;
 @property (weak, nonatomic) IBOutlet UIView *ButtonView;
@@ -36,6 +36,7 @@ void outputrect(CGRect t)
     [super viewDidLoad];
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     self.mPaintView = [helper createGraphView:self.mainMage.frame :self.view];
+    [helper addDelegate:self];
     helper.command = @"splines";
 }
 

@@ -45,8 +45,8 @@
 		024C5D40190EC3EF005974B9 /* Setting-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 024C5D26190EC3EF005974B9 /* Setting-2@2x.png */; };
 		024C5D41190EC3EF005974B9 /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 024C5D27190EC3EF005974B9 /* Yellow.png */; };
 		024C5D42190EC3EF005974B9 /* Yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 024C5D28190EC3EF005974B9 /* Yellow@2x.png */; };
-		BF6C2FEA1914A81E00488094 /* undo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6C2FE91914A81E00488094 /* undo.png */; };
-		BF6C2FEC1914A82400488094 /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6C2FEB1914A82400488094 /* redo.png */; };
+		BF5F4F4F1916386500D03801 /* undo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5F4F4D1916386500D03801 /* undo.png */; };
+		BF5F4F501916386500D03801 /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5F4F4E1916386500D03801 /* redo.png */; };
 		BF6C2FEE1914A8BB00488094 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6C2FED1914A8BB00488094 /* setting.png */; };
 		BF6C2FF01914A99400488094 /* shape.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6C2FEF1914A99400488094 /* shape.png */; };
 		BF944EE51914817500C3EC76 /* colorPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF944EE41914817500C3EC76 /* colorPadView.m */; };
@@ -157,8 +157,8 @@
 		024C5D26190EC3EF005974B9 /* Setting-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-2@2x.png"; sourceTree = "<group>"; };
 		024C5D27190EC3EF005974B9 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
 		024C5D28190EC3EF005974B9 /* Yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yellow@2x.png"; sourceTree = "<group>"; };
-		BF6C2FE91914A81E00488094 /* undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = undo.png; sourceTree = "<group>"; };
-		BF6C2FEB1914A82400488094 /* redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redo.png; sourceTree = "<group>"; };
+		BF5F4F4D1916386500D03801 /* undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = undo.png; sourceTree = "<group>"; };
+		BF5F4F4E1916386500D03801 /* redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redo.png; sourceTree = "<group>"; };
 		BF6C2FED1914A8BB00488094 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		BF6C2FEF1914A99400488094 /* shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape.png; sourceTree = "<group>"; };
 		BF944EE31914817500C3EC76 /* colorPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorPadView.h; sourceTree = "<group>"; };
@@ -327,10 +327,10 @@
 		024C5D0E190EC3EE005974B9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BF5F4F4D1916386500D03801 /* undo.png */,
+				BF5F4F4E1916386500D03801 /* redo.png */,
 				BF6C2FEF1914A99400488094 /* shape.png */,
 				BF6C2FED1914A8BB00488094 /* setting.png */,
-				BF6C2FE91914A81E00488094 /* undo.png */,
-				BF6C2FEB1914A82400488094 /* redo.png */,
 				024C5D0F190EC3EE005974B9 /* Black.png */,
 				024C5D10190EC3EE005974B9 /* Black@2x.png */,
 				024C5D11190EC3EE005974B9 /* Blue.png */,
@@ -435,7 +435,6 @@
 				024C5CA7190EA6D8005974B9 /* Images.xcassets in Resources */,
 				024C5D38190EC3EF005974B9 /* LightBlue@2x.png in Resources */,
 				024C5D31190EC3EF005974B9 /* DarkOrange.png in Resources */,
-				BF6C2FEC1914A82400488094 /* redo.png in Resources */,
 				024C5D3E190EC3EF005974B9 /* Setting-1@2x.png in Resources */,
 				024C5D2C190EC3EF005974B9 /* Blue@2x.png in Resources */,
 				024C5D41190EC3EF005974B9 /* Yellow.png in Resources */,
@@ -459,8 +458,9 @@
 				024C5D30190EC3EF005974B9 /* DarkGreen@2x.png in Resources */,
 				024C5D3C190EC3EF005974B9 /* Red@2x.png in Resources */,
 				024C5D33190EC3EF005974B9 /* Eraser.png in Resources */,
+				BF5F4F501916386500D03801 /* redo.png in Resources */,
 				BFDEFBAE191007C600EFC891 /* Main_iPhone.storyboard in Resources */,
-				BF6C2FEA1914A81E00488094 /* undo.png in Resources */,
+				BF5F4F4F1916386500D03801 /* undo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
