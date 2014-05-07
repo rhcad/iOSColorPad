@@ -45,11 +45,16 @@
 		024C5D40190EC3EF005974B9 /* Setting-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 024C5D26190EC3EF005974B9 /* Setting-2@2x.png */; };
 		024C5D41190EC3EF005974B9 /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 024C5D27190EC3EF005974B9 /* Yellow.png */; };
 		024C5D42190EC3EF005974B9 /* Yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 024C5D28190EC3EF005974B9 /* Yellow@2x.png */; };
+		BF581BBD191A1C9700410E5D /* app57.png in Resources */ = {isa = PBXBuildFile; fileRef = BF581BB7191A1C9700410E5D /* app57.png */; };
+		BF581BBE191A1C9700410E5D /* app72.png in Resources */ = {isa = PBXBuildFile; fileRef = BF581BB8191A1C9700410E5D /* app72.png */; };
+		BF581BBF191A1C9700410E5D /* fonts.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF581BB9191A1C9700410E5D /* fonts.svg */; };
+		BF581BC0191A1C9700410E5D /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = BF581BBA191A1C9700410E5D /* pencil.png */; };
+		BF581BC1191A1C9700410E5D /* pencil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF581BBB191A1C9700410E5D /* pencil@2x.png */; };
+		BF581BC2191A1C9700410E5D /* TouchVG.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF581BBC191A1C9700410E5D /* TouchVG.bundle */; };
 		BF5F4F4F1916386500D03801 /* undo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5F4F4D1916386500D03801 /* undo.png */; };
 		BF5F4F501916386500D03801 /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5F4F4E1916386500D03801 /* redo.png */; };
 		BF6C2FEE1914A8BB00488094 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6C2FED1914A8BB00488094 /* setting.png */; };
 		BF6C2FF01914A99400488094 /* shape.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6C2FEF1914A99400488094 /* shape.png */; };
-		BF944EE51914817500C3EC76 /* colorPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF944EE41914817500C3EC76 /* colorPadView.m */; };
 		BFDEFBA8190FB2E600EFC891 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDEFBA7190FB2E600EFC891 /* SettingViewController.m */; };
 		BFDEFBAE191007C600EFC891 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDEFBAD191007C600EFC891 /* Main_iPhone.storyboard */; };
 /* End PBXBuildFile section */
@@ -157,12 +162,16 @@
 		024C5D26190EC3EF005974B9 /* Setting-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-2@2x.png"; sourceTree = "<group>"; };
 		024C5D27190EC3EF005974B9 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
 		024C5D28190EC3EF005974B9 /* Yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yellow@2x.png"; sourceTree = "<group>"; };
+		BF581BB7191A1C9700410E5D /* app57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app57.png; sourceTree = "<group>"; };
+		BF581BB8191A1C9700410E5D /* app72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app72.png; sourceTree = "<group>"; };
+		BF581BB9191A1C9700410E5D /* fonts.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fonts.svg; sourceTree = "<group>"; };
+		BF581BBA191A1C9700410E5D /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
+		BF581BBB191A1C9700410E5D /* pencil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pencil@2x.png"; sourceTree = "<group>"; };
+		BF581BBC191A1C9700410E5D /* TouchVG.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TouchVG.bundle; sourceTree = "<group>"; };
 		BF5F4F4D1916386500D03801 /* undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = undo.png; sourceTree = "<group>"; };
 		BF5F4F4E1916386500D03801 /* redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redo.png; sourceTree = "<group>"; };
 		BF6C2FED1914A8BB00488094 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		BF6C2FEF1914A99400488094 /* shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape.png; sourceTree = "<group>"; };
-		BF944EE31914817500C3EC76 /* colorPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorPadView.h; sourceTree = "<group>"; };
-		BF944EE41914817500C3EC76 /* colorPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = colorPadView.m; sourceTree = "<group>"; };
 		BFDEFBA6190FB2E600EFC891 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		BFDEFBA7190FB2E600EFC891 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		BFDEFBAD191007C600EFC891 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -188,9 +197,10 @@
 		024C5C7F190EA6D8005974B9 = {
 			isa = PBXGroup;
 			children = (
-				024C5CC4190EAB3D005974B9 /* touchvg */,
+				BF581BB6191A1C9700410E5D /* Resources */,
 				024C5C91190EA6D8005974B9 /* HelloWorld */,
 				024C5D0E190EC3EE005974B9 /* images */,
+				024C5CC4190EAB3D005974B9 /* touchvg */,
 				024C5C8A190EA6D8005974B9 /* Frameworks */,
 				024C5C89190EA6D8005974B9 /* Products */,
 			);
@@ -362,6 +372,19 @@
 			path = HelloWorld/images;
 			sourceTree = "<group>";
 		};
+		BF581BB6191A1C9700410E5D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF581BB7191A1C9700410E5D /* app57.png */,
+				BF581BB8191A1C9700410E5D /* app72.png */,
+				BF581BB9191A1C9700410E5D /* fonts.svg */,
+				BF581BBA191A1C9700410E5D /* pencil.png */,
+				BF581BBB191A1C9700410E5D /* pencil@2x.png */,
+				BF581BBC191A1C9700410E5D /* TouchVG.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BFDEFBAC191005EB00EFC891 /* class */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,8 +392,6 @@
 				BFDEFBA7190FB2E600EFC891 /* SettingViewController.m */,
 				024C5CA3190EA6D8005974B9 /* ViewController.h */,
 				024C5CA4190EA6D8005974B9 /* ViewController.mm */,
-				BF944EE31914817500C3EC76 /* colorPadView.h */,
-				BF944EE41914817500C3EC76 /* colorPadView.m */,
 			);
 			name = class;
 			sourceTree = "<group>";
@@ -437,21 +458,27 @@
 				024C5D31190EC3EF005974B9 /* DarkOrange.png in Resources */,
 				024C5D3E190EC3EF005974B9 /* Setting-1@2x.png in Resources */,
 				024C5D2C190EC3EF005974B9 /* Blue@2x.png in Resources */,
+				BF581BBF191A1C9700410E5D /* fonts.svg in Resources */,
 				024C5D41190EC3EF005974B9 /* Yellow.png in Resources */,
 				BF6C2FF01914A99400488094 /* shape.png in Resources */,
 				024C5D2B190EC3EF005974B9 /* Blue.png in Resources */,
 				024C5D29190EC3EF005974B9 /* Black.png in Resources */,
 				024C5D2F190EC3EF005974B9 /* DarkGreen.png in Resources */,
 				024C5D40190EC3EF005974B9 /* Setting-2@2x.png in Resources */,
+				BF581BBD191A1C9700410E5D /* app57.png in Resources */,
 				024C5D07190EAB3D005974B9 /* Readme.txt in Resources */,
 				024C5D39190EC3EF005974B9 /* LightGreen.png in Resources */,
 				024C5D32190EC3EF005974B9 /* DarkOrange@2x.png in Resources */,
 				BF6C2FEE1914A8BB00488094 /* setting.png in Resources */,
 				024C5D37190EC3EF005974B9 /* LightBlue.png in Resources */,
+				BF581BBE191A1C9700410E5D /* app72.png in Resources */,
+				BF581BC0191A1C9700410E5D /* pencil.png in Resources */,
 				024C5C96190EA6D8005974B9 /* InfoPlist.strings in Resources */,
 				024C5D2E190EC3EF005974B9 /* Brown@2x.png in Resources */,
 				024C5D36190EC3EF005974B9 /* Grey@2x.png in Resources */,
+				BF581BC1191A1C9700410E5D /* pencil@2x.png in Resources */,
 				024C5D3F190EC3EF005974B9 /* Setting-2.png in Resources */,
+				BF581BC2191A1C9700410E5D /* TouchVG.bundle in Resources */,
 				024C5D34190EC3EF005974B9 /* Eraser@2x.png in Resources */,
 				024C5D2A190EC3EF005974B9 /* Black@2x.png in Resources */,
 				024C5D3B190EC3EF005974B9 /* Red.png in Resources */,
@@ -473,7 +500,6 @@
 			files = (
 				024C5CA5190EA6D8005974B9 /* ViewController.mm in Sources */,
 				024C5C9C190EA6D8005974B9 /* AppDelegate.m in Sources */,
-				BF944EE51914817500C3EC76 /* colorPadView.m in Sources */,
 				024C5C98190EA6D8005974B9 /* main.m in Sources */,
 				BFDEFBA8190FB2E600EFC891 /* SettingViewController.m in Sources */,
 			);

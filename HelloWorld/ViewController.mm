@@ -11,21 +11,12 @@
 #import "GiPaintView.h"
 #import "SettingViewController.h"
 
-void outputrect(CGRect t)
-{
-    NSLog(@"orgin=(x=%g,y=%g),size=(=%g,height=%g)",t.origin.x,t.origin.y,t.size.width,t.size.height);
-}
-
-
 @interface ViewController ()<UIActionSheetDelegate,GiPaintViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *mainMage;
-@property (weak, nonatomic) GiPaintView *mPaintView;
 @property (weak, nonatomic) IBOutlet UIView *ButtonView;
+@property (weak, nonatomic) GiPaintView *mPaintView;
 @property (strong, nonatomic) UIActionSheet *shapeSheet;
 @end
-
-
-
 
 @implementation ViewController
 
@@ -42,18 +33,11 @@ void outputrect(CGRect t)
 
 - (void)onFirstRegen:(id)view
 {
-    NSLog(@"- (void)onFirstRegen:(id)view ");
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
                                                           NSUserDomainMask, YES) objectAtIndex:0];
     [helper startUndoRecord:[path stringByAppendingPathComponent:@"undo"]];
 }
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    self.mPaintView.frame = self.mainMage.frame;
-}
-
 
 + (NSArray*)colors
 {
@@ -68,23 +52,18 @@ void outputrect(CGRect t)
     return _commands;
 }
 
+
 #pragma mark - IBActions
 
 - (IBAction)pencilPressed:(UIButton*)sender
 {
-    outputrect(self.mainMage.frame);
-    outputrect(self.ButtonView.frame);
     NSLog(@"pencilPressed ar %ld",(long)sender.tag);
-
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     helper.lineColor = [[ViewController colors] objectAtIndex:sender.tag];
-    
-    
 }
+
 - (IBAction)eraserPressed:(id)sender
 {
-    NSLog(@"eraserPressed");
-    
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     helper.command = @"erase";
     
@@ -99,13 +78,25 @@ void outputrect(CGRect t)
 
 - (IBAction)undo:(id)sender
 {
-    NSLog(@"undo button pressed");
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     [helper undo];
 }
 - (IBAction)testBtn:(id)sender
 {
-
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                          NSUserDomainMask, YES) objectAtIndex:0];
+    static int order = 0;
+    NSString *filename = [NSString stringWithFormat:@"%@/page%d.png", path, order++ % 10];
+    
+    id obj = self.mPaintView;
+    
+    if ([obj performSelector:@selector(exportPNG:) withObject:filename]) {
+        NSString *msg = [NSString stringWithFormat:@"%@",
+                         [filename substringFromIndex:[filename length] - 19]];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Save" message:msg
+                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 #pragma mark - ActionSheet
