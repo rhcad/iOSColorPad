@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet GiPaintView *paintView;
+
 @end
 
 @implementation ViewController
