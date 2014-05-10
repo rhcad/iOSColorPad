@@ -19,8 +19,23 @@
 		024C5CA7190EA6D8005974B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024C5CA6190EA6D8005974B9 /* Images.xcassets */; };
 		024C5D05190EAB3D005974B9 /* libTouchVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 024C5CC5190EAB3D005974B9 /* libTouchVG.a */; };
 		024C5D06190EAB3D005974B9 /* libTouchVGCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 024C5CC6190EAB3D005974B9 /* libTouchVGCore.a */; };
-		024C5D07190EAB3D005974B9 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 024C5CC7190EAB3D005974B9 /* Readme.txt */; };
 		024C5D09190EB36C005974B9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024C5D08190EB36C005974B9 /* QuartzCore.framework */; };
+		025A2FA9191EE51C0057282E /* Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2F99191EE51C0057282E /* Black.png */; };
+		025A2FAA191EE51C0057282E /* Black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2F9A191EE51C0057282E /* Black@2x.png */; };
+		025A2FAB191EE51C0057282E /* Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2F9B191EE51C0057282E /* Blue.png */; };
+		025A2FAC191EE51C0057282E /* Blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2F9C191EE51C0057282E /* Blue@2x.png */; };
+		025A2FAD191EE51C0057282E /* Eraser.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2F9D191EE51C0057282E /* Eraser.png */; };
+		025A2FAE191EE51C0057282E /* Eraser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2F9E191EE51C0057282E /* Eraser@2x.png */; };
+		025A2FAF191EE51C0057282E /* LightGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2F9F191EE51C0057282E /* LightGreen.png */; };
+		025A2FB0191EE51C0057282E /* LightGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA0191EE51C0057282E /* LightGreen@2x.png */; };
+		025A2FB1191EE51C0057282E /* Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA1191EE51C0057282E /* Red.png */; };
+		025A2FB2191EE51C0057282E /* Red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA2191EE51C0057282E /* Red@2x.png */; };
+		025A2FB3191EE51C0057282E /* Setting-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA3191EE51C0057282E /* Setting-1.png */; };
+		025A2FB4191EE51C0057282E /* Setting-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA4191EE51C0057282E /* Setting-1@2x.png */; };
+		025A2FB5191EE51C0057282E /* Setting-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA5191EE51C0057282E /* Setting-2.png */; };
+		025A2FB6191EE51C0057282E /* Setting-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA6191EE51C0057282E /* Setting-2@2x.png */; };
+		025A2FB7191EE51C0057282E /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA7191EE51C0057282E /* Yellow.png */; };
+		025A2FB8191EE51C0057282E /* Yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA8191EE51C0057282E /* Yellow@2x.png */; };
 		0266E878191E5285005154BA /* TouchVG.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0266E877191E5285005154BA /* TouchVG.bundle */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +57,6 @@
 		024C5CA6190EA6D8005974B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		024C5CC5190EAB3D005974B9 /* libTouchVG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTouchVG.a; sourceTree = "<group>"; };
 		024C5CC6190EAB3D005974B9 /* libTouchVGCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTouchVGCore.a; sourceTree = "<group>"; };
-		024C5CC7190EAB3D005974B9 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		024C5CC9190EAB3D005974B9 /* GiCanvasAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiCanvasAdapter.h; sourceTree = "<group>"; };
 		024C5CCA190EAB3D005974B9 /* GiPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiPaintView.h; sourceTree = "<group>"; };
 		024C5CCB190EAB3D005974B9 /* GiPaintViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiPaintViewDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +117,23 @@
 		024C5D03190EAB3D005974B9 /* spfactoryimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spfactoryimpl.h; sourceTree = "<group>"; };
 		024C5D04190EAB3D005974B9 /* testcanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testcanvas.h; sourceTree = "<group>"; };
 		024C5D08190EB36C005974B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		025A2F99191EE51C0057282E /* Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black.png; sourceTree = "<group>"; };
+		025A2F9A191EE51C0057282E /* Black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Black@2x.png"; sourceTree = "<group>"; };
+		025A2F9B191EE51C0057282E /* Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue.png; sourceTree = "<group>"; };
+		025A2F9C191EE51C0057282E /* Blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue@2x.png"; sourceTree = "<group>"; };
+		025A2F9D191EE51C0057282E /* Eraser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eraser.png; sourceTree = "<group>"; };
+		025A2F9E191EE51C0057282E /* Eraser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Eraser@2x.png"; sourceTree = "<group>"; };
+		025A2F9F191EE51C0057282E /* LightGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightGreen.png; sourceTree = "<group>"; };
+		025A2FA0191EE51C0057282E /* LightGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightGreen@2x.png"; sourceTree = "<group>"; };
+		025A2FA1191EE51C0057282E /* Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red.png; sourceTree = "<group>"; };
+		025A2FA2191EE51C0057282E /* Red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red@2x.png"; sourceTree = "<group>"; };
+		025A2FA3191EE51C0057282E /* Setting-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-1.png"; sourceTree = "<group>"; };
+		025A2FA4191EE51C0057282E /* Setting-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-1@2x.png"; sourceTree = "<group>"; };
+		025A2FA5191EE51C0057282E /* Setting-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-2.png"; sourceTree = "<group>"; };
+		025A2FA6191EE51C0057282E /* Setting-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-2@2x.png"; sourceTree = "<group>"; };
+		025A2FA7191EE51C0057282E /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
+		025A2FA8191EE51C0057282E /* Yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yellow@2x.png"; sourceTree = "<group>"; };
+		025A2FBB191EE5C40057282E /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 		0266E877191E5285005154BA /* TouchVG.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TouchVG.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +157,7 @@
 		024C5C7F190EA6D8005974B9 = {
 			isa = PBXGroup;
 			children = (
+				025A2F98191EE51C0057282E /* images */,
 				024C5CC4190EAB3D005974B9 /* touchvg */,
 				024C5C91190EA6D8005974B9 /* HelloWorld */,
 				024C5C8A190EA6D8005974B9 /* Frameworks */,
@@ -184,7 +216,7 @@
 				0266E877191E5285005154BA /* TouchVG.bundle */,
 				024C5CC5190EAB3D005974B9 /* libTouchVG.a */,
 				024C5CC6190EAB3D005974B9 /* libTouchVGCore.a */,
-				024C5CC7190EAB3D005974B9 /* Readme.txt */,
+				025A2FBB191EE5C40057282E /* Readme.md */,
 				024C5CC8190EAB3D005974B9 /* TouchVG */,
 				024C5CCD190EAB3D005974B9 /* TouchVGCore */,
 			);
@@ -264,6 +296,30 @@
 			path = TouchVGCore;
 			sourceTree = "<group>";
 		};
+		025A2F98191EE51C0057282E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				025A2F99191EE51C0057282E /* Black.png */,
+				025A2F9A191EE51C0057282E /* Black@2x.png */,
+				025A2F9B191EE51C0057282E /* Blue.png */,
+				025A2F9C191EE51C0057282E /* Blue@2x.png */,
+				025A2F9D191EE51C0057282E /* Eraser.png */,
+				025A2F9E191EE51C0057282E /* Eraser@2x.png */,
+				025A2F9F191EE51C0057282E /* LightGreen.png */,
+				025A2FA0191EE51C0057282E /* LightGreen@2x.png */,
+				025A2FA1191EE51C0057282E /* Red.png */,
+				025A2FA2191EE51C0057282E /* Red@2x.png */,
+				025A2FA3191EE51C0057282E /* Setting-1.png */,
+				025A2FA4191EE51C0057282E /* Setting-1@2x.png */,
+				025A2FA5191EE51C0057282E /* Setting-2.png */,
+				025A2FA6191EE51C0057282E /* Setting-2@2x.png */,
+				025A2FA7191EE51C0057282E /* Yellow.png */,
+				025A2FA8191EE51C0057282E /* Yellow@2x.png */,
+			);
+			name = images;
+			path = HelloWorld/images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -316,11 +372,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025A2FAB191EE51C0057282E /* Blue.png in Resources */,
 				0266E878191E5285005154BA /* TouchVG.bundle in Resources */,
+				025A2FB2191EE51C0057282E /* Red@2x.png in Resources */,
+				025A2FAD191EE51C0057282E /* Eraser.png in Resources */,
 				024C5CA2190EA6D8005974B9 /* Main_iPad.storyboard in Resources */,
+				025A2FB3191EE51C0057282E /* Setting-1.png in Resources */,
+				025A2FAE191EE51C0057282E /* Eraser@2x.png in Resources */,
+				025A2FB0191EE51C0057282E /* LightGreen@2x.png in Resources */,
+				025A2FB1191EE51C0057282E /* Red.png in Resources */,
+				025A2FB4191EE51C0057282E /* Setting-1@2x.png in Resources */,
+				025A2FAF191EE51C0057282E /* LightGreen.png in Resources */,
 				024C5CA7190EA6D8005974B9 /* Images.xcassets in Resources */,
+				025A2FAC191EE51C0057282E /* Blue@2x.png in Resources */,
 				024C5C9F190EA6D8005974B9 /* Main_iPhone.storyboard in Resources */,
-				024C5D07190EAB3D005974B9 /* Readme.txt in Resources */,
+				025A2FA9191EE51C0057282E /* Black.png in Resources */,
+				025A2FB5191EE51C0057282E /* Setting-2.png in Resources */,
+				025A2FB7191EE51C0057282E /* Yellow.png in Resources */,
+				025A2FAA191EE51C0057282E /* Black@2x.png in Resources */,
+				025A2FB6191EE51C0057282E /* Setting-2@2x.png in Resources */,
+				025A2FB8191EE51C0057282E /* Yellow@2x.png in Resources */,
 				024C5C96190EA6D8005974B9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
