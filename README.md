@@ -6,8 +6,8 @@ In this tutorial, you will create a vector drawing app based on TouchVG. See [to
 
 - Add the libraries and header files of TouchVG to this project.
 
-   - `cd' to the 'ios' directory of the TouchVG project.
-   - Type `./build.sh` to compile libraries outputed to the 'ios/output' directory.
+   - `cd' to the 'ios' directory of the [TouchVGTest](https://github.com/touchvg/TouchVGTest) project.
+   - Type `./build.sh` or `./build.sh -arch arm64` to compile libraries outputed to the `ios/output` directory.
    - Add `TouchVG`, `TouchVGCore`, `libTouchVG.a` and `libTouchVGCore.a` to this project.
    - Change 'Library Search Paths' of the HelloWorld target from '.../iOSHelloWorld/touchvg' to the relative path 'touchvg'.
 

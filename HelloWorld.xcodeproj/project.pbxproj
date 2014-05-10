@@ -21,6 +21,7 @@
 		024C5D06190EAB3D005974B9 /* libTouchVGCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 024C5CC6190EAB3D005974B9 /* libTouchVGCore.a */; };
 		024C5D07190EAB3D005974B9 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 024C5CC7190EAB3D005974B9 /* Readme.txt */; };
 		024C5D09190EB36C005974B9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024C5D08190EB36C005974B9 /* QuartzCore.framework */; };
+		0266E878191E5285005154BA /* TouchVG.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0266E877191E5285005154BA /* TouchVG.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		024C5D03190EAB3D005974B9 /* spfactoryimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spfactoryimpl.h; sourceTree = "<group>"; };
 		024C5D04190EAB3D005974B9 /* testcanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testcanvas.h; sourceTree = "<group>"; };
 		024C5D08190EB36C005974B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0266E877191E5285005154BA /* TouchVG.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TouchVG.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 		024C5CC4190EAB3D005974B9 /* touchvg */ = {
 			isa = PBXGroup;
 			children = (
+				0266E877191E5285005154BA /* TouchVG.bundle */,
 				024C5CC5190EAB3D005974B9 /* libTouchVG.a */,
 				024C5CC6190EAB3D005974B9 /* libTouchVGCore.a */,
 				024C5CC7190EAB3D005974B9 /* Readme.txt */,
@@ -313,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0266E878191E5285005154BA /* TouchVG.bundle in Resources */,
 				024C5CA2190EA6D8005974B9 /* Main_iPad.storyboard in Resources */,
 				024C5CA7190EA6D8005974B9 /* Images.xcassets in Resources */,
 				024C5C9F190EA6D8005974B9 /* Main_iPhone.storyboard in Resources */,

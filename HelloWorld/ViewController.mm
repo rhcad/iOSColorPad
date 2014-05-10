@@ -21,13 +21,7 @@
     
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     [helper createGraphView:self.view.bounds :self.view];
-    helper.command = @"splines";
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    helper.command = @"line";
 }
 
 @end
