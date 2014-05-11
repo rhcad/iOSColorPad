@@ -1,10 +1,10 @@
 # iOSHelloWorld
 
-In this tutorial, you will create a vector drawing app based on TouchVG. See [touchvg/Readme.txt](touchvg/Readme.txt) to copy files required to compile.
+In this tutorial, you will create a vector drawing app based on TouchVG. See [touchvg/Readme.md](touchvg/Readme.md) to copy files required to compile.
 
 - Create a project with the `Single View Application` wizard.
 
-- Add the libraries and header files of TouchVG to this project.
+- Add the libraries and header files of TouchVG to this project (Or type `./build.sh` to build and copy libraries).
 
    - `cd' to the 'ios' directory of the [TouchVGTest](https://github.com/touchvg/TouchVGTest) project.
    - Type `./build.sh` or `./build.sh -arch arm64` to compile libraries outputed to the `ios/output` directory.
@@ -23,7 +23,7 @@ In this tutorial, you will create a vector drawing app based on TouchVG. See [to
 
 - Enjoy the simple drawing app now! You can fork this project and add drawing UI  reference to [ColorPad wizard](http://www.raywenderlich.com/18840/how-to-make-a-simple-drawing-app-with-uikit).
 
-## ColorPad
+## iOSColorPad
 
 ### 主界面
 
@@ -83,3 +83,4 @@ In this tutorial, you will create a vector drawing app based on TouchVG. See [to
 2. 在 Storyboard 中的 SettingsViewController 上插入一个Toolbar，并在其中插入一个可变宽度的占位按钮。将默认按钮改为Close，并添加响应函数 closeSettings：
 
 		- (IBAction)closeSettings:(id)sender {		    [self dismissViewControllerAnimated:YES completion:nil];		}
+   按住Ctrl拖动“设置”按钮到SettingsViewController中，选择 Modal 创建 segue。

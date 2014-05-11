@@ -100,6 +100,7 @@
                                         </state>
                                         <connections>
                                             <action selector="settingPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nmf-fu-NU5"/>
+                                            <segue destination="KLq-fY-wfB" kind="modal" id="Xgs-Yn-ijt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -152,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxH-lU-az6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="641" y="-32"/>
+            <point key="canvasLocation" x="734" y="4"/>
         </scene>
     </scenes>
     <resources>
