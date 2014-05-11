@@ -42,6 +42,34 @@ In this tutorial, you will create a vector drawing app based on TouchVG. See [to
 
 4. 在Main_iPhone中插入一个按钮到paintView上，设置类型为 Custom，去掉缺省标题文字，Image 选为 Black.png, size 属性为 20×60, 然后将按钮放到屏幕的左下角。
 
-5. 按住 Option 拖动按钮复制 4 次，依次设置其 image 为 Black、Red、Blue、LightGreen、Yellow。设置 tag 属性为从 0 到 4。
+5. 按住 Option 拖动按钮复制 4 次，依次设置其 image 为 Black、Red、Blue、LightGreen、Yellow。设置 tag 属性为从 1 到 5。
 
 6. 打开Assistant Editor，在Main_iPhone中按下Ctrl拖动黑色的按钮到ViewController中，设置 Connection 属性为 Action， 命名为 pencilPressed， 并且点击 Connect。然后用同一个 outlet 连接其他的按钮。
+
+7. 在 viewDidLoad 中启动默认绘图命令：
+
+		- (void)viewDidLoad {
+    		[super viewDidLoad];
+    
+    		GiViewHelper *helper = [GiViewHelper sharedInstance];
+    		helper.command = @"line";
+		}
+
+   实现画笔和橡皮擦按钮函数：
+
+		- (IBAction)pencilPressed:(id)sender {
+		    UIButton *btn = sender;
+		    GiViewHelper *helper = [GiViewHelper sharedInstance];
+		    
+		    helper.command = @"@draw";
+		    switch (btn.tag) {
+		        case 1:
+		            helper.lineColor = [UIColor blackColor];
+		            break;
+		        //...
+		    }
+		}
+		- (IBAction)eraserPressed:(id)sender {
+    		GiViewHelper *helper = [GiViewHelper sharedInstance];
+    		helper.command = @"erase";
+		}
