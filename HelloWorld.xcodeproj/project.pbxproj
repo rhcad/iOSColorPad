@@ -30,10 +30,8 @@
 		025A2FB0191EE51C0057282E /* LightGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA0191EE51C0057282E /* LightGreen@2x.png */; };
 		025A2FB1191EE51C0057282E /* Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA1191EE51C0057282E /* Red.png */; };
 		025A2FB2191EE51C0057282E /* Red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA2191EE51C0057282E /* Red@2x.png */; };
-		025A2FB3191EE51C0057282E /* Setting-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA3191EE51C0057282E /* Setting-1.png */; };
-		025A2FB4191EE51C0057282E /* Setting-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA4191EE51C0057282E /* Setting-1@2x.png */; };
-		025A2FB5191EE51C0057282E /* Setting-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA5191EE51C0057282E /* Setting-2.png */; };
-		025A2FB6191EE51C0057282E /* Setting-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA6191EE51C0057282E /* Setting-2@2x.png */; };
+		025A2FB5191EE51C0057282E /* Setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA5191EE51C0057282E /* Setting.png */; };
+		025A2FB6191EE51C0057282E /* Setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA6191EE51C0057282E /* Setting@2x.png */; };
 		025A2FB7191EE51C0057282E /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA7191EE51C0057282E /* Yellow.png */; };
 		025A2FB8191EE51C0057282E /* Yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA8191EE51C0057282E /* Yellow@2x.png */; };
 		0266E878191E5285005154BA /* TouchVG.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0266E877191E5285005154BA /* TouchVG.bundle */; };
@@ -127,10 +125,8 @@
 		025A2FA0191EE51C0057282E /* LightGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LightGreen@2x.png"; sourceTree = "<group>"; };
 		025A2FA1191EE51C0057282E /* Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red.png; sourceTree = "<group>"; };
 		025A2FA2191EE51C0057282E /* Red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red@2x.png"; sourceTree = "<group>"; };
-		025A2FA3191EE51C0057282E /* Setting-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-1.png"; sourceTree = "<group>"; };
-		025A2FA4191EE51C0057282E /* Setting-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-1@2x.png"; sourceTree = "<group>"; };
-		025A2FA5191EE51C0057282E /* Setting-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-2.png"; sourceTree = "<group>"; };
-		025A2FA6191EE51C0057282E /* Setting-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-2@2x.png"; sourceTree = "<group>"; };
+		025A2FA5191EE51C0057282E /* Setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Setting.png; sourceTree = "<group>"; };
+		025A2FA6191EE51C0057282E /* Setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting@2x.png"; sourceTree = "<group>"; };
 		025A2FA7191EE51C0057282E /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
 		025A2FA8191EE51C0057282E /* Yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yellow@2x.png"; sourceTree = "<group>"; };
 		025A2FBB191EE5C40057282E /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
@@ -309,10 +305,8 @@
 				025A2FA0191EE51C0057282E /* LightGreen@2x.png */,
 				025A2FA1191EE51C0057282E /* Red.png */,
 				025A2FA2191EE51C0057282E /* Red@2x.png */,
-				025A2FA3191EE51C0057282E /* Setting-1.png */,
-				025A2FA4191EE51C0057282E /* Setting-1@2x.png */,
-				025A2FA5191EE51C0057282E /* Setting-2.png */,
-				025A2FA6191EE51C0057282E /* Setting-2@2x.png */,
+				025A2FA5191EE51C0057282E /* Setting.png */,
+				025A2FA6191EE51C0057282E /* Setting@2x.png */,
 				025A2FA7191EE51C0057282E /* Yellow.png */,
 				025A2FA8191EE51C0057282E /* Yellow@2x.png */,
 			);
@@ -377,20 +371,18 @@
 				025A2FB2191EE51C0057282E /* Red@2x.png in Resources */,
 				025A2FAD191EE51C0057282E /* Eraser.png in Resources */,
 				024C5CA2190EA6D8005974B9 /* Main_iPad.storyboard in Resources */,
-				025A2FB3191EE51C0057282E /* Setting-1.png in Resources */,
 				025A2FAE191EE51C0057282E /* Eraser@2x.png in Resources */,
 				025A2FB0191EE51C0057282E /* LightGreen@2x.png in Resources */,
 				025A2FB1191EE51C0057282E /* Red.png in Resources */,
-				025A2FB4191EE51C0057282E /* Setting-1@2x.png in Resources */,
 				025A2FAF191EE51C0057282E /* LightGreen.png in Resources */,
 				024C5CA7190EA6D8005974B9 /* Images.xcassets in Resources */,
 				025A2FAC191EE51C0057282E /* Blue@2x.png in Resources */,
 				024C5C9F190EA6D8005974B9 /* Main_iPhone.storyboard in Resources */,
 				025A2FA9191EE51C0057282E /* Black.png in Resources */,
-				025A2FB5191EE51C0057282E /* Setting-2.png in Resources */,
+				025A2FB5191EE51C0057282E /* Setting.png in Resources */,
 				025A2FB7191EE51C0057282E /* Yellow.png in Resources */,
 				025A2FAA191EE51C0057282E /* Black@2x.png in Resources */,
-				025A2FB6191EE51C0057282E /* Setting-2@2x.png in Resources */,
+				025A2FB6191EE51C0057282E /* Setting@2x.png in Resources */,
 				025A2FB8191EE51C0057282E /* Yellow@2x.png in Resources */,
 				024C5C96190EA6D8005974B9 /* InfoPlist.strings in Resources */,
 			);
@@ -473,6 +465,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)",
+					touchvg,
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,6 +503,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)",
+					touchvg,
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -521,10 +521,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloWorld/HelloWorld-Prefix.pch";
 				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					touchvg,
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -538,10 +534,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloWorld/HelloWorld-Prefix.pch";
 				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					touchvg,
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

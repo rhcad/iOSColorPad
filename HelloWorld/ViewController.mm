@@ -13,6 +13,10 @@
 
 @property (weak, nonatomic) IBOutlet GiPaintView *paintView;
 
+- (IBAction)pencilPressed:(id)sender;
+- (IBAction)eraserPressed:(id)sender;
+- (IBAction)settingPressed:(id)sender;
+
 @end
 
 @implementation ViewController
@@ -24,6 +28,17 @@
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     [helper createGraphView:self.view.bounds :self.view];
     helper.command = @"line";
+}
+
+#pragma mark - IBActions
+
+- (IBAction)pencilPressed:(id)sender {
+}
+
+- (IBAction)eraserPressed:(id)sender {
+}
+
+- (IBAction)settingPressed:(id)sender {
 }
 
 @end
