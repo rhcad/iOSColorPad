@@ -6,4 +6,5 @@ xcuserdata
 xcshareddata
 ._*
 *.a
-touchvg/*.h
+touchvg/TouchVG*
+TouchVG.bundle

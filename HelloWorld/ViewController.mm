@@ -8,16 +8,15 @@
 
 #import "ViewController.h"
 #import "GiViewHelper.h"
+#import "GiPaintView.h"
 #import "SettingViewController.h"
 
-@interface ViewController ()<UIActionSheetDelegate>
+@interface ViewController ()<UIActionSheetDelegate,GiPaintViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *mainMage;
+@property (weak, nonatomic) IBOutlet UIView *ButtonView;
 @property (weak, nonatomic) GiPaintView *mPaintView;
 @property (strong, nonatomic) UIActionSheet *shapeSheet;
 @end
-
-
-
 
 @implementation ViewController
 
@@ -27,17 +26,17 @@
 {
     [super viewDidLoad];
     GiViewHelper *helper = [GiViewHelper sharedInstance];
-    self.mPaintView = [helper createGraphView:self.mainMage.bounds :self.view];
+    self.mPaintView = [helper createGraphView:self.mainMage.bounds :self.mainMage];
+    [helper addDelegate:self];
     helper.command = @"splines";
+}
 
-    
-    //undo record
-    
+- (void)onFirstRegen:(id)view
+{
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
                                                           NSUserDomainMask, YES) objectAtIndex:0];
     [helper startUndoRecord:[path stringByAppendingPathComponent:@"undo"]];
-
-
 }
 
 + (NSArray*)colors
@@ -53,21 +52,18 @@
     return _commands;
 }
 
+
 #pragma mark - IBActions
 
 - (IBAction)pencilPressed:(UIButton*)sender
 {
     NSLog(@"pencilPressed ar %ld",(long)sender.tag);
-
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     helper.lineColor = [[ViewController colors] objectAtIndex:sender.tag];
-    
-    
 }
+
 - (IBAction)eraserPressed:(id)sender
 {
-    NSLog(@"eraserPressed");
-    
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     helper.command = @"erase";
     
@@ -87,7 +83,20 @@
 }
 - (IBAction)testBtn:(id)sender
 {
-
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                          NSUserDomainMask, YES) objectAtIndex:0];
+    static int order = 0;
+    NSString *filename = [NSString stringWithFormat:@"%@/page%d.png", path, order++ % 10];
+    
+    id obj = self.mPaintView;
+    
+    if ([obj performSelector:@selector(exportPNG:) withObject:filename]) {
+        NSString *msg = [NSString stringWithFormat:@"%@",
+                         [filename substringFromIndex:[filename length] - 19]];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Save" message:msg
+                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 #pragma mark - ActionSheet
@@ -100,7 +109,7 @@
             return;
         }
         helper.command = [self.shapeSheet buttonTitleAtIndex:buttonIndex];
-        NSLog(@"press shape sheet at index %d title %@",buttonIndex,[self.shapeSheet buttonTitleAtIndex:buttonIndex]);
+        NSLog(@"press shape sheet at index %ld title %@",(long)buttonIndex,[self.shapeSheet buttonTitleAtIndex:buttonIndex]);
     }
 }
 
@@ -118,13 +127,13 @@
                                          cancelButtonTitle:nil
                                     destructiveButtonTitle:nil
                                          otherButtonTitles:nil];
-        int cmdCount = [[ViewController commands] count];
+        NSUInteger cmdCount = [[ViewController commands] count];
         for (int i=0; i < cmdCount ; i++) {
             NSString *cmd = [[ViewController commands] objectAtIndex:i];
             [_shapeSheet addButtonWithTitle:cmd];
             NSLog(@"%@",cmd);
         }
-        NSLog(@"number of buttons = %d  cmdCount = %d ",[_shapeSheet numberOfButtons],cmdCount);
+        NSLog(@"number of buttons = %ld  cmdCount = %lu ",(long)[_shapeSheet numberOfButtons],(unsigned long)cmdCount);
     }
     return _shapeSheet;
 }
