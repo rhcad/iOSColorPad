@@ -25,7 +25,9 @@ In this tutorial, you will create a vector drawing app based on TouchVG. See [to
 
 ## ColorPad
 
-按照“ColorPad向导”设置绘图界面：
+### 主界面
+
+按照“ColorPad向导”设置绘图主界面：
 
 1. 添加按钮图片资源。我将原文的图片改小为高60，@2x的高为120，所有图片见提交历史。
 
@@ -73,3 +75,7 @@ In this tutorial, you will create a vector drawing app based on TouchVG. See [to
     		GiViewHelper *helper = [GiViewHelper sharedInstance];
     		helper.command = @"erase";
 		}
+
+### 画笔设置界面
+
+1. 创建 SettingsViewController 类。在 Storyboard 中的绘图控制器右边拖动插入一个 View Controller，设置其类为 SettingsViewController。

@@ -35,24 +35,8 @@
 		025A2FB7191EE51C0057282E /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA7191EE51C0057282E /* Yellow.png */; };
 		025A2FB8191EE51C0057282E /* Yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025A2FA8191EE51C0057282E /* Yellow@2x.png */; };
 		0266E878191E5285005154BA /* TouchVG.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0266E877191E5285005154BA /* TouchVG.bundle */; };
+		02FEB4D4191FAF38003A364D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FEB4D3191FAF38003A364D /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		02B190D0191F75DA001593BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 02B190CB191F75DA001593BC /* TouchVG.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AE2A3A49178FC511000194AE;
-			remoteInfo = TouchVG;
-		};
-		02B190D2191F75DA001593BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 02B190CB191F75DA001593BC /* TouchVG.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 02BD66A8189A1E9A00A4A444;
-			remoteInfo = "TouchVG-SVG";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		024C5C88190EA6D8005974B9 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,7 +132,8 @@
 		025A2FA8191EE51C0057282E /* Yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yellow@2x.png"; sourceTree = "<group>"; };
 		025A2FBB191EE5C40057282E /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 		0266E877191E5285005154BA /* TouchVG.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TouchVG.bundle; sourceTree = "<group>"; };
-		02B190CB191F75DA001593BC /* TouchVG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TouchVG.xcodeproj; path = ../TouchVGTest/thirdparty/TouchVG/ios/TouchVG/TouchVG.xcodeproj; sourceTree = "<group>"; };
+		02FEB4D2191FAF38003A364D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		02FEB4D3191FAF38003A364D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +156,6 @@
 		024C5C7F190EA6D8005974B9 = {
 			isa = PBXGroup;
 			children = (
-				02B190CB191F75DA001593BC /* TouchVG.xcodeproj */,
 				025A2F98191EE51C0057282E /* images */,
 				024C5CC4190EAB3D005974B9 /* touchvg */,
 				024C5C91190EA6D8005974B9 /* HelloWorld */,
@@ -202,6 +186,8 @@
 		024C5C91190EA6D8005974B9 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				02FEB4D2191FAF38003A364D /* SettingsViewController.h */,
+				02FEB4D3191FAF38003A364D /* SettingsViewController.m */,
 				024C5C9A190EA6D8005974B9 /* AppDelegate.h */,
 				024C5C9B190EA6D8005974B9 /* AppDelegate.m */,
 				024C5C9D190EA6D8005974B9 /* Main_iPhone.storyboard */,
@@ -333,15 +319,6 @@
 			path = HelloWorld/images;
 			sourceTree = "<group>";
 		};
-		02B190CC191F75DA001593BC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				02B190D1191F75DA001593BC /* libTouchVG.a */,
-				02B190D3191F75DA001593BC /* libTouchVG-SVG.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -382,35 +359,12 @@
 			mainGroup = 024C5C7F190EA6D8005974B9;
 			productRefGroup = 024C5C89190EA6D8005974B9 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 02B190CC191F75DA001593BC /* Products */;
-					ProjectRef = 02B190CB191F75DA001593BC /* TouchVG.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				024C5C87190EA6D8005974B9 /* HelloWorld */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		02B190D1191F75DA001593BC /* libTouchVG.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libTouchVG.a;
-			remoteRef = 02B190D0191F75DA001593BC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		02B190D3191F75DA001593BC /* libTouchVG-SVG.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libTouchVG-SVG.a";
-			remoteRef = 02B190D2191F75DA001593BC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		024C5C86190EA6D8005974B9 /* Resources */ = {
@@ -449,6 +403,7 @@
 				024C5CA5190EA6D8005974B9 /* ViewController.mm in Sources */,
 				024C5C9C190EA6D8005974B9 /* AppDelegate.m in Sources */,
 				024C5C98190EA6D8005974B9 /* main.m in Sources */,
+				02FEB4D4191FAF38003A364D /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
