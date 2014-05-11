@@ -16,92 +16,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0mD-HB-yfZ" userLabel="paintView" customClass="GiPaintView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mD-HB-yfZ" userLabel="paintView" customClass="GiPaintView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Etu-lO-fex" userLabel="Buttons">
+                                <rect key="frame" x="38" y="494" width="247" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIu-ZI-pEq" userLabel="Black">
-                                        <rect key="frame" x="41" y="487" width="27" height="166"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSz-vc-IxD" userLabel="Black">
+                                        <rect key="frame" x="3" y="1" width="27" height="166"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" image="Black.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pencilPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sQW-Kv-QUQ"/>
+                                            <action selector="pencilPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="s6G-PT-mdD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PS0-yL-5c6" userLabel="Red">
-                                        <rect key="frame" x="69" y="487" width="27" height="166"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Be-h6-skG" userLabel="Red">
+                                        <rect key="frame" x="31" y="1" width="27" height="166"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" image="Red.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pencilPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U5n-zl-vx9"/>
+                                            <action selector="pencilPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5WJ-Xb-gJn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZk-F3-I2c" userLabel="Blue">
-                                        <rect key="frame" x="97" y="487" width="27" height="166"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfe-75-aQz" userLabel="Blue">
+                                        <rect key="frame" x="59" y="1" width="27" height="166"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" image="Blue.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pencilPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7CK-Wt-gST"/>
+                                            <action selector="pencilPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Lg-KP-Tpy"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMo-lg-oDo" userLabel="Green">
-                                        <rect key="frame" x="125" y="487" width="27" height="166"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYy-Sr-T13" userLabel="Green">
+                                        <rect key="frame" x="87" y="1" width="27" height="166"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" image="LightGreen.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pencilPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="38X-pu-Nuo"/>
+                                            <action selector="pencilPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XqG-RU-A7E"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRa-1y-QT8" userLabel="Yellow">
-                                        <rect key="frame" x="153" y="487" width="27" height="166"/>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9i-c7-3Ap" userLabel="Yellow">
+                                        <rect key="frame" x="115" y="1" width="27" height="166"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" image="Yellow.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pencilPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ShT-mh-SRm"/>
+                                            <action selector="pencilPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RV2-03-y5T"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvN-7b-CGX" userLabel="Eraser">
-                                        <rect key="frame" x="186" y="487" width="28" height="84"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMo-w2-iej" userLabel="Eraser">
+                                        <rect key="frame" x="148" y="1" width="28" height="84"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" image="Eraser.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="eraserPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lrJ-RE-ahG"/>
+                                            <action selector="eraserPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1pm-xK-QSf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVA-QD-s9h" userLabel="Setting">
-                                        <rect key="frame" x="222" y="499" width="58" height="60"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRW-wY-qXy" userLabel="Setting">
+                                        <rect key="frame" x="184" y="13" width="58" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" image="Setting.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="settingPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zhC-Qb-XXp"/>
+                                            <action selector="settingPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nmf-fu-NU5"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xLE-d4-iUr" firstAttribute="top" secondItem="0mD-HB-yfZ" secondAttribute="bottom" id="DSS-zu-Vxg"/>
+                            <constraint firstItem="0mD-HB-yfZ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Gg4-Vf-jPk"/>
+                            <constraint firstItem="xLE-d4-iUr" firstAttribute="top" secondItem="Etu-lO-fex" secondAttribute="bottom" id="UiQ-JR-D0B"/>
+                            <constraint firstAttribute="trailing" secondItem="0mD-HB-yfZ" secondAttribute="trailing" id="haY-Z7-tCP"/>
+                            <constraint firstItem="0mD-HB-yfZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="wu3-Sq-ypE"/>
+                            <constraint firstAttribute="centerX" secondItem="Etu-lO-fex" secondAttribute="centerX" id="yJx-0r-9KD"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="paintView" destination="0mD-HB-yfZ" id="TWF-eX-NM6"/>

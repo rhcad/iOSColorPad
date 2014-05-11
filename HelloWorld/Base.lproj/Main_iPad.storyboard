@@ -16,13 +16,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tMo-Fl-egk" userLabel="paintView" customClass="GiPaintView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMo-Fl-egk" userLabel="paintView" customClass="GiPaintView">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F42-i9-atW" userLabel="Buttons">
+                                <rect key="frame" x="260" y="940" width="249" height="84"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKc-eq-t88" userLabel="Black">
+                                        <rect key="frame" x="5" y="2" width="27" height="166"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="Black.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEK-h4-YCN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbG-oH-ZUD" userLabel="Red">
+                                        <rect key="frame" x="33" y="2" width="27" height="166"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="Red.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2up-Pk-dPx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKQ-bz-YKk" userLabel="Blue">
+                                        <rect key="frame" x="61" y="2" width="27" height="166"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="Blue.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxz-jI-eUE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek6-yB-DT5" userLabel="Green">
+                                        <rect key="frame" x="89" y="2" width="27" height="166"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="LightGreen.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zko-Zs-Fjt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Le-Kr-0XI" userLabel="Yellow">
+                                        <rect key="frame" x="117" y="2" width="27" height="166"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="Yellow.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pencilPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m0A-RQ-y2m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yz-e5-7lf" userLabel="Eraser">
+                                        <rect key="frame" x="150" y="2" width="28" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="Eraser.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="eraserPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYc-PS-72j"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpM-0Y-uFS" userLabel="Setting">
+                                        <rect key="frame" x="186" y="14" width="58" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="Setting.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="settingPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWo-VM-bIV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tMo-Fl-egk" secondAttribute="trailing" id="HZJ-7V-RVJ"/>
+                            <constraint firstItem="fuL-Wl-dfn" firstAttribute="top" secondItem="F42-i9-atW" secondAttribute="bottom" id="LhJ-1f-APz"/>
+                            <constraint firstItem="fuL-Wl-dfn" firstAttribute="top" secondItem="tMo-Fl-egk" secondAttribute="bottom" id="Y6W-Kv-Ibw"/>
+                            <constraint firstItem="tMo-Fl-egk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lpy-vZ-66g"/>
+                            <constraint firstItem="tMo-Fl-egk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uRM-ca-SgS"/>
+                            <constraint firstAttribute="centerX" secondItem="F42-i9-atW" secondAttribute="centerX" id="xY3-T5-jJ9"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="paintView" destination="tMo-Fl-egk" id="ywY-Ev-WUh"/>
@@ -32,6 +123,15 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Black.png" width="27" height="166"/>
+        <image name="Blue.png" width="27" height="166"/>
+        <image name="Eraser.png" width="28" height="84"/>
+        <image name="LightGreen.png" width="27" height="166"/>
+        <image name="Red.png" width="27" height="166"/>
+        <image name="Setting.png" width="58" height="60"/>
+        <image name="Yellow.png" width="27" height="166"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
         <simulatedOrientationMetrics key="orientation"/>
