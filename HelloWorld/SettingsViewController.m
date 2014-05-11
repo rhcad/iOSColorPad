@@ -10,6 +10,8 @@
 
 @interface SettingsViewController ()
 
+- (IBAction)closeSettings:(id)sender;
+
 @end
 
 @implementation SettingsViewController
@@ -27,6 +29,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+- (IBAction)closeSettings:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -79,3 +79,7 @@ In this tutorial, you will create a vector drawing app based on TouchVG. See [to
 ### 画笔设置界面
 
 1. 创建 SettingsViewController 类。在 Storyboard 中的绘图控制器右边拖动插入一个 View Controller，设置其类为 SettingsViewController。
+
+2. 在 Storyboard 中的 SettingsViewController 上插入一个Toolbar，并在其中插入一个可变宽度的占位按钮。将默认按钮改为Close，并添加响应函数 closeSettings：
+
+		- (IBAction)closeSettings:(id)sender {		    [self dismissViewControllerAnimated:YES completion:nil];		}
