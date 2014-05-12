@@ -49,7 +49,7 @@
 		BF581BBF191A1C9700410E5D /* fonts.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF581BB9191A1C9700410E5D /* fonts.svg */; };
 		BF581BC0191A1C9700410E5D /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = BF581BBA191A1C9700410E5D /* pencil.png */; };
 		BF581BC1191A1C9700410E5D /* pencil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF581BBB191A1C9700410E5D /* pencil@2x.png */; };
-		BF581BC2191A1C9700410E5D /* TouchVG.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF581BBC191A1C9700410E5D /* TouchVG.bundle */; };
+		BF5C32591920E455006E5607 /* TouchVG.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF5C32581920E455006E5607 /* TouchVG.bundle */; };
 		BF5F4F4F1916386500D03801 /* undo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5F4F4D1916386500D03801 /* undo.png */; };
 		BF5F4F501916386500D03801 /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5F4F4E1916386500D03801 /* redo.png */; };
 		BF6C2FEE1914A8BB00488094 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6C2FED1914A8BB00488094 /* setting.png */; };
@@ -75,10 +75,6 @@
 		024C5CC5190EAB3D005974B9 /* libTouchVG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTouchVG.a; sourceTree = "<group>"; };
 		024C5CC6190EAB3D005974B9 /* libTouchVGCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTouchVGCore.a; sourceTree = "<group>"; };
 		024C5CC7190EAB3D005974B9 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
-		024C5CC9190EAB3D005974B9 /* GiCanvasAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiCanvasAdapter.h; sourceTree = "<group>"; };
-		024C5CCA190EAB3D005974B9 /* GiPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiPaintView.h; sourceTree = "<group>"; };
-		024C5CCB190EAB3D005974B9 /* GiPaintViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiPaintViewDelegate.h; sourceTree = "<group>"; };
-		024C5CCC190EAB3D005974B9 /* GiViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiViewHelper.h; sourceTree = "<group>"; };
 		024C5CCE190EAB3D005974B9 /* cmdbasic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmdbasic.h; sourceTree = "<group>"; };
 		024C5CCF190EAB3D005974B9 /* cmdobserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmdobserver.h; sourceTree = "<group>"; };
 		024C5CD0190EAB3D005974B9 /* cmdsubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmdsubject.h; sourceTree = "<group>"; };
@@ -166,7 +162,12 @@
 		BF581BB9191A1C9700410E5D /* fonts.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fonts.svg; sourceTree = "<group>"; };
 		BF581BBA191A1C9700410E5D /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
 		BF581BBB191A1C9700410E5D /* pencil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pencil@2x.png"; sourceTree = "<group>"; };
-		BF581BBC191A1C9700410E5D /* TouchVG.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TouchVG.bundle; sourceTree = "<group>"; };
+		BF5C32531920E418006E5607 /* ARCMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacro.h; sourceTree = "<group>"; };
+		BF5C32541920E418006E5607 /* GiCanvasAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiCanvasAdapter.h; sourceTree = "<group>"; };
+		BF5C32551920E418006E5607 /* GiPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiPaintView.h; sourceTree = "<group>"; };
+		BF5C32561920E418006E5607 /* GiPaintViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiPaintViewDelegate.h; sourceTree = "<group>"; };
+		BF5C32571920E418006E5607 /* GiViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiViewHelper.h; sourceTree = "<group>"; };
+		BF5C32581920E455006E5607 /* TouchVG.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TouchVG.bundle; sourceTree = "<group>"; };
 		BF5F4F4D1916386500D03801 /* undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = undo.png; sourceTree = "<group>"; };
 		BF5F4F4E1916386500D03801 /* redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redo.png; sourceTree = "<group>"; };
 		BF6C2FED1914A8BB00488094 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
@@ -251,24 +252,13 @@
 		024C5CC4190EAB3D005974B9 /* touchvg */ = {
 			isa = PBXGroup;
 			children = (
+				BF5C32521920E418006E5607 /* TouchVG */,
 				024C5CC5190EAB3D005974B9 /* libTouchVG.a */,
 				024C5CC6190EAB3D005974B9 /* libTouchVGCore.a */,
 				024C5CC7190EAB3D005974B9 /* Readme.txt */,
-				024C5CC8190EAB3D005974B9 /* TouchVG */,
 				024C5CCD190EAB3D005974B9 /* TouchVGCore */,
 			);
 			path = touchvg;
-			sourceTree = "<group>";
-		};
-		024C5CC8190EAB3D005974B9 /* TouchVG */ = {
-			isa = PBXGroup;
-			children = (
-				024C5CC9190EAB3D005974B9 /* GiCanvasAdapter.h */,
-				024C5CCA190EAB3D005974B9 /* GiPaintView.h */,
-				024C5CCB190EAB3D005974B9 /* GiPaintViewDelegate.h */,
-				024C5CCC190EAB3D005974B9 /* GiViewHelper.h */,
-			);
-			path = TouchVG;
 			sourceTree = "<group>";
 		};
 		024C5CCD190EAB3D005974B9 /* TouchVGCore */ = {
@@ -379,9 +369,21 @@
 				BF581BB9191A1C9700410E5D /* fonts.svg */,
 				BF581BBA191A1C9700410E5D /* pencil.png */,
 				BF581BBB191A1C9700410E5D /* pencil@2x.png */,
-				BF581BBC191A1C9700410E5D /* TouchVG.bundle */,
+				BF5C32581920E455006E5607 /* TouchVG.bundle */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BF5C32521920E418006E5607 /* TouchVG */ = {
+			isa = PBXGroup;
+			children = (
+				BF5C32531920E418006E5607 /* ARCMacro.h */,
+				BF5C32541920E418006E5607 /* GiCanvasAdapter.h */,
+				BF5C32551920E418006E5607 /* GiPaintView.h */,
+				BF5C32561920E418006E5607 /* GiPaintViewDelegate.h */,
+				BF5C32571920E418006E5607 /* GiViewHelper.h */,
+			);
+			path = TouchVG;
 			sourceTree = "<group>";
 		};
 		BFDEFBAC191005EB00EFC891 /* class */ = {
@@ -476,7 +478,7 @@
 				024C5D36190EC3EF005974B9 /* Grey@2x.png in Resources */,
 				BF581BC1191A1C9700410E5D /* pencil@2x.png in Resources */,
 				024C5D3F190EC3EF005974B9 /* Setting-2.png in Resources */,
-				BF581BC2191A1C9700410E5D /* TouchVG.bundle in Resources */,
+				BF5C32591920E455006E5607 /* TouchVG.bundle in Resources */,
 				024C5D34190EC3EF005974B9 /* Eraser@2x.png in Resources */,
 				024C5D2A190EC3EF005974B9 /* Black@2x.png in Resources */,
 				024C5D3B190EC3EF005974B9 /* Red.png in Resources */,

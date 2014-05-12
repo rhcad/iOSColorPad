@@ -12,7 +12,8 @@
 #import "SettingViewController.h"
 
 @interface ViewController ()<UIActionSheetDelegate,GiPaintViewDelegate>
-@property (weak, nonatomic) IBOutlet UIView *mainMage;
+@property (weak, nonatomic) IBOutlet UIView *ToolView;
+@property (weak, nonatomic) IBOutlet GiPaintView *mainMage;
 @property (weak, nonatomic) IBOutlet UIView *ButtonView;
 @property (weak, nonatomic) GiPaintView *mPaintView;
 @property (strong, nonatomic) UIActionSheet *shapeSheet;
@@ -26,9 +27,10 @@
 {
     [super viewDidLoad];
     GiViewHelper *helper = [GiViewHelper sharedInstance];
-    self.mPaintView = [helper createGraphView:self.mainMage.bounds :self.mainMage];
+    self.mPaintView = self.mainMage;//[helper createGraphView:self.mainMage.bounds :self.mainMage];
     [helper addDelegate:self];
     helper.command = @"splines";
+    [self.view bringSubviewToFront:self.ToolView];
 }
 
 - (void)onFirstRegen:(id)view
