@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet GiPaintView *mainMage;
 @property (weak, nonatomic) IBOutlet UIView *ButtonView;
 @property (weak, nonatomic) GiPaintView *mPaintView;
+@property (weak, nonatomic) IBOutlet UINavigationItem *mNavigationBar;
 @property (strong, nonatomic) UIActionSheet *shapeSheet;
 @end
 
@@ -31,6 +32,19 @@
     [helper addDelegate:self];
     helper.command = @"splines";
     [self.view bringSubviewToFront:self.ToolView];
+
+    UIBarButtonItem *saveBtn = [[UIBarButtonItem alloc]initWithTitle:@"Save"
+                                                               style:UIBarButtonItemStylePlain
+                                                              target:self
+                                                              action:@selector(save:)];
+    
+    UIBarButtonItem *loadBtn = [[UIBarButtonItem alloc]initWithTitle:@"Load"
+                                                               style:UIBarButtonItemStylePlain
+                                                              target:self
+                                                              action:@selector(load:)];
+    
+    NSArray *mRightBtns =[[NSArray alloc]initWithObjects:loadBtn,saveBtn, nil];
+    self.mNavigationBar.rightBarButtonItems = mRightBtns;
 }
 
 - (void)onFirstRegen:(id)view
@@ -149,9 +163,13 @@
 
 - (IBAction)save:(id)sender
 {
-    static int fileCounter = 0;
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                          NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *filename = [NSString stringWithFormat:@"%@/mPaint", path];
+
+    //static int fileCounter = 0;
     GiViewHelper *helper = [GiViewHelper sharedInstance];
-    [helper saveToFile:[NSString stringWithFormat:@"vgfile%d",fileCounter++ ]];
+    [helper saveToFile:filename];
 }
 
 - (IBAction)reset:(id)sender
@@ -160,4 +178,15 @@
     [helper clearShapes];
 }
 
+- (void)load:(id)sender
+{
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                          NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *filename = [NSString stringWithFormat:@"%@/mPaint", path];
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
+    [helper loadFromFile:filename];
+}
+
 @end
+
+
