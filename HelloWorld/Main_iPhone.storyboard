@@ -98,7 +98,6 @@
                                         </state>
                                         <connections>
                                             <action selector="choseShape:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rNo-CT-ML3"/>
-                                            <action selector="testBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ods-zg-Khs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhn-OT-Tcv">
@@ -152,11 +151,6 @@
                                 <action selector="reset:" destination="vXZ-lx-hvc" id="ihb-Hn-skR"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="save" id="4gF-9z-e5m">
-                            <connections>
-                                <action selector="save:" destination="vXZ-lx-hvc" id="B8Z-6b-owq"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="ButtonView" destination="xcB-Gf-W7A" id="H8j-Oa-7fc"/>
@@ -186,6 +180,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afc-9m-dxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="81" y="-34"/>
+        </scene>
+        <!--Image Picker Controller-->
+        <scene sceneID="bkj-ft-ovH">
+            <objects>
+                <viewController id="soX-dw-FdY" customClass="UIImagePickerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SMz-0n-VwQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ogz-Jm-l7m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="juc-PX-vqc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHj-5f-ZBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1438" y="-34"/>
         </scene>
         <!--Setting View Controller - Setting-->
         <scene sceneID="Lic-uB-9gy">
@@ -226,10 +238,23 @@
                                     <action selector="valueChange:" destination="bqT-yO-bur" eventType="valueChanged" id="oIM-lf-Ah9"/>
                                 </connections>
                             </slider>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fN-VN-wP7">
+                                <rect key="frame" x="-6" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="qWr-Rq-CFF">
+                                        <connections>
+                                            <segue destination="soX-dw-FdY" kind="modal" identifier="segueToPicker" id="3pw-Cg-CPq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Setting" id="aOe-CC-p7Q"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="brushSlider" destination="eFn-Pq-Udf" id="fM9-hW-iGi"/>
                         <outlet property="opacitySlider" destination="rrs-jJ-2a3" id="5aC-Uw-Vhy"/>

@@ -8,7 +8,6 @@
 
 #import "SettingViewController.h"
 
-
 @interface SettingViewController ()
 @property (weak, nonatomic) IBOutlet UISlider *brushSlider;
 @property (weak, nonatomic) IBOutlet UISlider *opacitySlider;
@@ -52,6 +51,30 @@
             break;
     }
 
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"segueToPicker"]){
+            UIImagePickerController *pickerController = segue.destinationViewController;
+            pickerController.delegate = self;
+            pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+            pickerController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+            pickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    static int ord = 0;
+    NSString *name = [NSString stringWithFormat:@"camera%d.png",ord++];
+    
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    NSData *imageData = UIImagePNGRepresentation(image);
+    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:name];
+    [imageData writeToFile:path atomically:YES];
+    
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
+    [helper insertImageFromFile:path];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 
