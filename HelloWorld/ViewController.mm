@@ -11,7 +11,8 @@
 #import "GiPaintView.h"
 #import "SettingViewController.h"
 
-@interface ViewController ()<UIActionSheetDelegate,GiPaintViewDelegate>
+@interface ViewController ()<UIActionSheetDelegate, GiPaintViewDelegate,
+                            UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *ToolView;
 @property (weak, nonatomic) IBOutlet GiPaintView *mainMage;
 @property (weak, nonatomic) IBOutlet UIView *ButtonView;
@@ -85,7 +86,6 @@
     
 }
 
-
 - (IBAction)redo:(id)sender
 {
     GiViewHelper *helper = [GiViewHelper sharedInstance];
@@ -97,6 +97,7 @@
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     [helper undo];
 }
+
 - (IBAction)testBtn:(id)sender
 {
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
@@ -113,6 +114,28 @@
                                                        delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"segueToPicker"]){
+        UIImagePickerController *pickerController = segue.destinationViewController;
+        pickerController.delegate = self;
+        pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        pickerController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+        pickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    NSString *name = [[[NSUUID UUID] UUIDString] stringByAppendingString:@".png"];
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    NSData *imageData = UIImagePNGRepresentation(image);
+    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:name];
+    [imageData writeToFile:path atomically:YES];
+    
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
+    [helper insertImageFromFile:path];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - ActionSheet

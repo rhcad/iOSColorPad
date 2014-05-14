@@ -8,7 +8,7 @@
 
 #import "SettingViewController.h"
 
-@interface SettingViewController ()
+@interface SettingViewController ()<UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UISlider *brushSlider;
 @property (weak, nonatomic) IBOutlet UISlider *opacitySlider;
 

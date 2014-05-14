@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Uu2-fF-uhI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Uu2-fF-uhI">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--View Controller - Title-->
@@ -91,7 +91,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpM-ck-QHY">
-                                        <rect key="frame" x="153" y="35" width="35" height="35"/>
+                                        <rect key="frame" x="153" y="38" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="shape" image="shape.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -108,6 +108,16 @@
                                         </state>
                                         <connections>
                                             <action selector="testBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bgo-X0-Rnz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSL-DG-l2J" userLabel="Button - camera">
+                                        <rect key="frame" x="155" y="0.0" width="32" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="shape" image="camera.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="soX-dw-FdY" kind="modal" identifier="segueToPicker" id="qEy-hD-3lc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -194,10 +204,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="WV1-rj-p9M"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHj-5f-ZBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="-34"/>
+            <point key="canvasLocation" x="966" y="646"/>
         </scene>
         <!--Setting View Controller - Setting-->
         <scene sceneID="Lic-uB-9gy">
@@ -270,6 +281,7 @@
         <image name="Blue.png" width="27" height="166"/>
         <image name="Eraser.png" width="28" height="84"/>
         <image name="Red.png" width="27" height="166"/>
+        <image name="camera.png" width="32" height="32"/>
         <image name="redo.png" width="180" height="100"/>
         <image name="setting.png" width="256" height="256"/>
         <image name="shape.png" width="502" height="502"/>
@@ -280,4 +292,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="qEy-hD-3lc"/>
+    </inferredMetricsTieBreakers>
 </document>
