@@ -32,7 +32,6 @@
     self.mPaintView = self.mainMage;//[helper createGraphView:self.mainMage.bounds :self.mainMage];
     [helper addDelegate:self];
     helper.command = @"splines";
-    [self.view bringSubviewToFront:self.ToolView];
 
     UIBarButtonItem *saveBtn = [[UIBarButtonItem alloc]initWithTitle:@"Save"
                                                                style:UIBarButtonItemStylePlain
@@ -46,6 +45,14 @@
     
     NSArray *mRightBtns =[[NSArray alloc]initWithObjects:loadBtn,saveBtn, nil];
     self.mNavigationBar.rightBarButtonItems = mRightBtns;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.mPaintView dynamicShapeView:YES];
+    [self.view bringSubviewToFront:self.ToolView];
+    
+    [super viewDidAppear:animated];
 }
 
 - (void)onFirstRegen:(id)view
