@@ -22,3 +22,14 @@ In this tutorial, you will create a vector drawing app based on TouchVG. See [to
    - Start the free-hand splines command via `helper.command = @"splines";`. The names of all commands will be printed in logging after the app runs.
 
 - Enjoy the simple drawing app now! You can fork this project and add drawing UI  reference to [ColorPad wizard](http://www.raywenderlich.com/18840/how-to-make-a-simple-drawing-app-with-uikit).
+
+## How to Build
+
+- Type `./build.sh` to compile libraries and copy them to `touchvg` directory.
+- Or type `./build.sh -arch arm64` to make for iOS 64-bit.
+- Then run HelloWorld.xcodeproj in Xcode.
+
+## Contributors
+
+- [ljlin](https://github.com/ljlin)
+- [Zhang Yungui](https://github.com/rhcad)

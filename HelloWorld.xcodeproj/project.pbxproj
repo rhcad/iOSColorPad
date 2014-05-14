@@ -74,7 +74,6 @@
 		024C5CA6190EA6D8005974B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		024C5CC5190EAB3D005974B9 /* libTouchVG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTouchVG.a; sourceTree = "<group>"; };
 		024C5CC6190EAB3D005974B9 /* libTouchVGCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTouchVGCore.a; sourceTree = "<group>"; };
-		024C5CC7190EAB3D005974B9 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		024C5CCE190EAB3D005974B9 /* cmdbasic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmdbasic.h; sourceTree = "<group>"; };
 		024C5CCF190EAB3D005974B9 /* cmdobserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmdobserver.h; sourceTree = "<group>"; };
 		024C5CD0190EAB3D005974B9 /* cmdsubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmdsubject.h; sourceTree = "<group>"; };
@@ -157,6 +156,7 @@
 		024C5D26190EC3EF005974B9 /* Setting-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting-2@2x.png"; sourceTree = "<group>"; };
 		024C5D27190EC3EF005974B9 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
 		024C5D28190EC3EF005974B9 /* Yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yellow@2x.png"; sourceTree = "<group>"; };
+		AED65C4A19233AC2009C3EF3 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 		BF581BB7191A1C9700410E5D /* app57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app57.png; sourceTree = "<group>"; };
 		BF581BB8191A1C9700410E5D /* app72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app72.png; sourceTree = "<group>"; };
 		BF581BB9191A1C9700410E5D /* fonts.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fonts.svg; sourceTree = "<group>"; };
@@ -252,10 +252,10 @@
 		024C5CC4190EAB3D005974B9 /* touchvg */ = {
 			isa = PBXGroup;
 			children = (
+				AED65C4A19233AC2009C3EF3 /* Readme.md */,
 				BF5C32521920E418006E5607 /* TouchVG */,
 				024C5CC5190EAB3D005974B9 /* libTouchVG.a */,
 				024C5CC6190EAB3D005974B9 /* libTouchVGCore.a */,
-				024C5CC7190EAB3D005974B9 /* Readme.txt */,
 				024C5CCD190EAB3D005974B9 /* TouchVGCore */,
 			);
 			path = touchvg;
