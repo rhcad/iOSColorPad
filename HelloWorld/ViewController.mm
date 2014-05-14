@@ -14,9 +14,8 @@
 @interface ViewController ()<UIActionSheetDelegate, GiPaintViewDelegate,
                             UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *ToolView;
-@property (weak, nonatomic) IBOutlet GiPaintView *mainMage;
+@property (weak, nonatomic) IBOutlet GiPaintView *mPaintView;
 @property (weak, nonatomic) IBOutlet UIView *ButtonView;
-@property (weak, nonatomic) GiPaintView *mPaintView;
 @property (weak, nonatomic) IBOutlet UINavigationItem *mNavigationBar;
 @property (strong, nonatomic) UIActionSheet *shapeSheet;
 @end
@@ -29,7 +28,6 @@
 {
     [super viewDidLoad];
     GiViewHelper *helper = [GiViewHelper sharedInstance];
-    self.mPaintView = self.mainMage;//[helper createGraphView:self.mainMage.bounds :self.mainMage];
     [helper addDelegate:self];
     helper.command = @"splines";
 
@@ -45,6 +43,13 @@
     
     NSArray *mRightBtns =[[NSArray alloc]initWithObjects:loadBtn,saveBtn, nil];
     self.mNavigationBar.rightBarButtonItems = mRightBtns;
+    
+    /*
+    CGRect extent = helper.displayExtent;
+    CGRect box    = helper.boundingBox;
+    
+    NSLog(@"%g %g %g %g",extent.origin.x,extent.origin.y,extent.size.width,extent.size.height);
+    */
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -103,6 +108,12 @@
 {
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     [helper undo];
+}
+- (IBAction)imageInfo:(id)sender
+{
+    GiViewHelper *helpr = [GiViewHelper sharedInstance];
+    NSString *path = [helpr getImagePath];
+    NSLog(@"%@",path);
 }
 - (IBAction)takePhoto:(id)sender
 {

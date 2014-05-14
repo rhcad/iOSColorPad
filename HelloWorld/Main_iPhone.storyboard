@@ -110,16 +110,6 @@
                                             <action selector="testBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bgo-X0-Rnz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSL-DG-l2J" userLabel="Button - camera">
-                                        <rect key="frame" x="155" y="0.0" width="32" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="shape" image="camera.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="takePhoto:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gEy-py-LFd"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.4722869998" green="0.70848527009999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -130,16 +120,39 @@
                                     <constraint firstAttribute="trailing" secondItem="gTI-C7-dJ2" secondAttribute="trailing" constant="8" id="uTp-ns-bvu"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIW-vV-4se" userLabel="mainMage" customClass="GiPaintView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIW-vV-4se" userLabel="mPaintView" customClass="GiPaintView">
                                 <rect key="frame" x="0.0" y="64" width="320" height="424"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Yu-46-XQH" userLabel="ToolView">
+                                        <rect key="frame" x="268" y="62" width="32" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSL-DG-l2J" userLabel="Button - camera">
+                                                <rect key="frame" x="0.0" y="8" width="32" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="shape" image="camera.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="takePhoto:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gEy-py-LFd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdo-Pc-FHE">
+                                                <rect key="frame" x="5" y="59" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="imageInfo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="I66-dx-Nwz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Yu-46-XQH" userLabel="ToolView">
-                                <rect key="frame" x="144" y="134" width="32" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -164,7 +177,7 @@
                         <outlet property="ButtonView" destination="xcB-Gf-W7A" id="H8j-Oa-7fc"/>
                         <outlet property="ToolView" destination="7Yu-46-XQH" id="eJh-XA-Dn0"/>
                         <outlet property="mNavigationBar" destination="DT3-xN-5yw" id="6Bh-qq-cIH"/>
-                        <outlet property="mainMage" destination="nIW-vV-4se" id="npv-n1-a4F"/>
+                        <outlet property="mPaintView" destination="nIW-vV-4se" id="5Ur-UF-pvF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -192,7 +205,6 @@
         <!--Setting View Controller - Setting-->
         <scene sceneID="Lic-uB-9gy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A9m-wj-ULa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bqT-yO-bur" customClass="SettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OVm-LQ-4Ho"/>
@@ -247,6 +259,7 @@
                         <outlet property="opacitySlider" destination="rrs-jJ-2a3" id="5aC-Uw-Vhy"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A9m-wj-ULa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="966" y="-34"/>
         </scene>
