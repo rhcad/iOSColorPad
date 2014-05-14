@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "GiViewHelper.h"
 
-@interface SettingViewController : UIViewController<UIImagePickerControllerDelegate>
+@interface SettingViewController : UIViewController
 @end

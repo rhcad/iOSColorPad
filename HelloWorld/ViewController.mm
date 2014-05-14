@@ -104,6 +104,37 @@
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     [helper undo];
 }
+- (IBAction)takePhoto:(id)sender
+{
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeCamera]==YES){
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        picker.allowsEditing = NO;
+        picker.delegate = self;
+        
+        [self presentViewController:picker animated:YES completion:nil];
+
+    }
+
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+   
+    void (^addImage)()= ^(){
+        NSString *name = [[[NSUUID UUID] UUIDString] stringByAppendingString:@".png"];
+        UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        NSData *imageData = UIImagePNGRepresentation(image);
+        NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:name];
+        [imageData writeToFile:path atomically:YES];
+        
+        GiViewHelper *helper = [GiViewHelper sharedInstance];
+        [helper insertImageFromFile:path];
+    };
+    [picker dismissViewControllerAnimated:YES completion:addImage];
+}
+
 
 - (IBAction)testBtn:(id)sender
 {
@@ -123,27 +154,8 @@
     }
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"segueToPicker"]){
-        UIImagePickerController *pickerController = segue.destinationViewController;
-        pickerController.delegate = self;
-        pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
-        pickerController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
-        pickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
-    }
-}
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    NSString *name = [[[NSUUID UUID] UUIDString] stringByAppendingString:@".png"];
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    NSData *imageData = UIImagePNGRepresentation(image);
-    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:name];
-    [imageData writeToFile:path atomically:YES];
-    
-    GiViewHelper *helper = [GiViewHelper sharedInstance];
-    [helper insertImageFromFile:path];
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
+
 
 #pragma mark - ActionSheet
 

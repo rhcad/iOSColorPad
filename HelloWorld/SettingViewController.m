@@ -52,6 +52,7 @@
     }
 
 }
+/*
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"segueToPicker"]){
             UIImagePickerController *pickerController = segue.destinationViewController;
@@ -76,6 +77,5 @@
     [helper insertImageFromFile:path];
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
-
-
+*/
 @end

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Uu2-fF-uhI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Uu2-fF-uhI">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--View Controller - Title-->
@@ -117,7 +117,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="soX-dw-FdY" kind="modal" identifier="segueToPicker" id="qEy-hD-3lc"/>
+                                            <action selector="takePhoto:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gEy-py-LFd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -189,28 +189,10 @@
             </objects>
             <point key="canvasLocation" x="81" y="-34"/>
         </scene>
-        <!--Image Picker Controller-->
-        <scene sceneID="bkj-ft-ovH">
-            <objects>
-                <viewController id="soX-dw-FdY" customClass="UIImagePickerController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SMz-0n-VwQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ogz-Jm-l7m"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="juc-PX-vqc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="WV1-rj-p9M"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gHj-5f-ZBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="966" y="646"/>
-        </scene>
         <!--Setting View Controller - Setting-->
         <scene sceneID="Lic-uB-9gy">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A9m-wj-ULa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bqT-yO-bur" customClass="SettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OVm-LQ-4Ho"/>
@@ -251,11 +233,7 @@
                                 <rect key="frame" x="-6" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="camera" id="qWr-Rq-CFF">
-                                        <connections>
-                                            <segue destination="soX-dw-FdY" kind="modal" identifier="segueToPicker" id="3pw-Cg-CPq"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem systemItem="camera" id="qWr-Rq-CFF"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -269,7 +247,6 @@
                         <outlet property="opacitySlider" destination="rrs-jJ-2a3" id="5aC-Uw-Vhy"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A9m-wj-ULa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="966" y="-34"/>
         </scene>
@@ -290,7 +267,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="qEy-hD-3lc"/>
-    </inferredMetricsTieBreakers>
 </document>
