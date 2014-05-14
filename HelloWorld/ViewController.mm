@@ -109,6 +109,33 @@
     GiViewHelper *helper = [GiViewHelper sharedInstance];
     [helper undo];
 }
+- (IBAction)addImage:(id)sender
+{
+    DoImagePickerController *cont = [[DoImagePickerController alloc] initWithNibName:@"DoImagePickerController" bundle:nil];
+    cont.delegate = self;
+    cont.nResultType = DO_PICKER_RESULT_UIIMAGE;
+    cont.nMaxCount = 5;
+    cont.nColumnCount = 4;
+    
+    [self presentViewController:cont animated:YES completion:nil];
+
+}
+
++ (void)addImage:(UIImage*)image withPath:(NSString*)path andName:(NSString*)name
+{
+    NSData *imageData = UIImagePNGRepresentation(image);
+    NSString *fullPath;
+    if ([path  characterAtIndex:path.length=='/']){
+        fullPath = [path stringByAppendingString:name];
+    }
+    else{
+        fullPath = [path stringByAppendingPathComponent:name];
+    }
+    [imageData writeToFile:fullPath atomically:YES];
+    GiViewHelper *helper = [GiViewHelper sharedInstance];
+    [helper insertImageFromFile:fullPath];
+}
+
 - (IBAction)imageInfo:(id)sender
 {
     GiViewHelper *helpr = [GiViewHelper sharedInstance];
@@ -132,19 +159,21 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-   
     void (^addImage)()= ^(){
         NSString *name = [[[NSUUID UUID] UUIDString] stringByAppendingString:@".png"];
         UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
         NSData *imageData = UIImagePNGRepresentation(image);
         NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:name];
         [imageData writeToFile:path atomically:YES];
-        
+        NSLog(@"%@",path);
         GiViewHelper *helper = [GiViewHelper sharedInstance];
         [helper insertImageFromFile:path];
     };
     [picker dismissViewControllerAnimated:YES completion:addImage];
+
 }
+
+
 
 
 - (IBAction)testBtn:(id)sender
@@ -240,6 +269,22 @@
     [helper loadFromFile:filename];
 }
 
+#pragma mark - DoImagePickerControllerDelegate
+- (void)didCancelDoImagePickerController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)didSelectPhotosFromDoImagePickerController:(DoImagePickerController *)picker result:(NSArray *)aSelected
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    static int count = 0;
+    for (UIImage* image in aSelected){
+        NSString *name = [NSString stringWithFormat:@"photo%d.png",count++];
+        [ViewController addImage:image withPath:NSTemporaryDirectory() andName:name];
+    }
+    
+}
 @end
 
 
