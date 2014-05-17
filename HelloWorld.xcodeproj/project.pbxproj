@@ -49,7 +49,6 @@
 		BF581BBF191A1C9700410E5D /* fonts.svg in Resources */ = {isa = PBXBuildFile; fileRef = BF581BB9191A1C9700410E5D /* fonts.svg */; };
 		BF581BC0191A1C9700410E5D /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = BF581BBA191A1C9700410E5D /* pencil.png */; };
 		BF581BC1191A1C9700410E5D /* pencil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF581BBB191A1C9700410E5D /* pencil@2x.png */; };
-		BF5C32591920E455006E5607 /* TouchVG.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF5C32581920E455006E5607 /* TouchVG.bundle */; };
 		BF5F4F4F1916386500D03801 /* undo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5F4F4D1916386500D03801 /* undo.png */; };
 		BF5F4F501916386500D03801 /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5F4F4E1916386500D03801 /* redo.png */; };
 		BF6C2FEE1914A8BB00488094 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6C2FED1914A8BB00488094 /* setting.png */; };
@@ -109,7 +108,6 @@
 		BF581BB9191A1C9700410E5D /* fonts.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fonts.svg; sourceTree = "<group>"; };
 		BF581BBA191A1C9700410E5D /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
 		BF581BBB191A1C9700410E5D /* pencil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pencil@2x.png"; sourceTree = "<group>"; };
-		BF5C32581920E455006E5607 /* TouchVG.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TouchVG.bundle; sourceTree = "<group>"; };
 		BF5F4F4D1916386500D03801 /* undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = undo.png; sourceTree = "<group>"; };
 		BF5F4F4E1916386500D03801 /* redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redo.png; sourceTree = "<group>"; };
 		BF6C2FED1914A8BB00488094 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
@@ -239,7 +237,6 @@
 				BF581BB9191A1C9700410E5D /* fonts.svg */,
 				BF581BBA191A1C9700410E5D /* pencil.png */,
 				BF581BBB191A1C9700410E5D /* pencil@2x.png */,
-				BF5C32581920E455006E5607 /* TouchVG.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -340,7 +337,6 @@
 				024C5D36190EC3EF005974B9 /* Grey@2x.png in Resources */,
 				BF581BC1191A1C9700410E5D /* pencil@2x.png in Resources */,
 				024C5D3F190EC3EF005974B9 /* Setting-2.png in Resources */,
-				BF5C32591920E455006E5607 /* TouchVG.bundle in Resources */,
 				024C5D34190EC3EF005974B9 /* Eraser@2x.png in Resources */,
 				024C5D2A190EC3EF005974B9 /* Black@2x.png in Resources */,
 				024C5D3B190EC3EF005974B9 /* Red.png in Resources */,
