@@ -285,6 +285,13 @@
     }
     
 }
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake){
+        [self reset:nil];
+    }
+}
+
 @end
 
 
