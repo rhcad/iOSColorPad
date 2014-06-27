@@ -1,0 +1,27 @@
+PODS:
+  - Color-Picker-for-iOS (1.0)
+  - DoImagePickerController (0.0.1)
+  - TouchVG (1.1.14):
+    - TouchVGCore (~> 1.0.37)
+  - TouchVGCore (1.0.37)
+
+DEPENDENCIES:
+  - Color-Picker-for-iOS (from `https://github.com/ljlin/Color-Picker-for-iOS.git`)
+  - DoImagePickerController (from `https://github.com/ljlin/DoImagePickerController.git`)
+  - TouchVG (from `https://raw.githubusercontent.com/touchvg/vgios/develop/podspec/TouchVG.podspec`)
+
+EXTERNAL SOURCES:
+  Color-Picker-for-iOS:
+    :git: https://github.com/ljlin/Color-Picker-for-iOS.git
+  DoImagePickerController:
+    :git: https://github.com/ljlin/DoImagePickerController.git
+  TouchVG:
+    :podspec: https://raw.githubusercontent.com/touchvg/vgios/develop/podspec/TouchVG.podspec
+
+SPEC CHECKSUMS:
+  Color-Picker-for-iOS: 0aa29cf936ad52bb2938fd0d6c6a12ae761f15a2
+  DoImagePickerController: cf00ca8bf070a87b9fe226df54ac4c9e154d7224
+  TouchVG: af7cf6b82425ac26d0b1fac1a1e06e733397c21b
+  TouchVGCore: e59ab76866f3d7e1f3822a4cffeee6b5d5c4b63e
+
+COCOAPODS: 0.33.1
